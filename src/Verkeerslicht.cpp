@@ -28,3 +28,9 @@ void Verkeerslicht::setPositie(double nieuw) {
 void Verkeerslicht::setCyclus(int nieuw) {
     cyclus = nieuw;
 }
+
+Verkeerslicht::Verkeerslicht(string baan, double positie, int cyclus) {
+    setNaamBaan(baan);
+    setPositie(positie);
+    setCyclus(cyclus);
+}
