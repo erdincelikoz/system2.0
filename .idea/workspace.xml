@@ -7,7 +7,7 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
-    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -20,6 +20,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
+      <config projectName="system2_0" targetName="verkeers_tests" />
       <config projectName="system2_0" targetName="system2_0" />
     </generated>
   </component>
@@ -29,10 +30,26 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="Added functional constructor to Verkeerslicht.cpp">
+    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;">
+      <change afterPath="$PROJECT_DIR$/tests/VoertuigTests.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-7aa295ce9f69db8fe322.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8291258f1d0b8bb78aa0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-05-02T12-25-32-0257.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-system2_0-Debug-577b3583225ac13bf642.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verkeerslicht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verkeerslicht.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuig.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuig.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XmlParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,18 +63,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "erdincelikoz"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;erdincelikoz&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/erdincelikoz/system2.0.git",
-    "accountId": "034c5c5f-7e1a-4ba2-9f5b-03bda2c7efa2"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/erdincelikoz/system2.0.git&quot;,
+    &quot;accountId&quot;: &quot;034c5c5f-7e1a-4ba2-9f5b-03bda2c7efa2&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
@@ -76,13 +93,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "CMake Application.system2_0.executor": "Run",
+    "Google Test.verkeers_tests.executor": "Run",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "ctest.advertisement.all.test.configuration.is.created": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "C:/Users/erdin/CLionProjects/system1_0",
     "node.js.detected.package.eslint": "true",
@@ -100,10 +120,16 @@
       <recent name="C:\Users\erdin\CLionProjects\system2.0\src" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="Google Test.verkeers_tests">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="verkeers_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system2_0" TARGET_NAME="verkeers_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system2_0" RUN_TARGET_NAME="verkeers_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="system2_0" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system2_0" TARGET_NAME="system2_0" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system2_0" RUN_TARGET_NAME="system2_0">
@@ -111,6 +137,17 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.system2_0" />
+      <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="Google Test.verkeers_tests" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,7 +158,8 @@
       <option name="presentableId" value="Default" />
       <updated>1746129119765</updated>
       <workItem from="1746129121513" duration="8688000" />
-      <workItem from="1746191914103" duration="26722000" />
+      <workItem from="1746191914103" duration="29412000" />
+      <workItem from="1746269916618" duration="5563000" />
     </task>
     <task id="LOCAL-00001" summary="Added functional constructor to Verkeerslicht.cpp">
       <option name="closed" value="true" />
@@ -131,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746235039084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;">
+      <option name="closed" value="true" />
+      <created>1746237952819</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746237952819</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,17 +190,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added functional constructor to Verkeerslicht.cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functional constructor to Verkeerslicht.cpp" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.cpp</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;" />
   </component>
 </project>

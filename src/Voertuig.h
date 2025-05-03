@@ -25,30 +25,30 @@ private:
     double versnelling;
     double gewensteMaxSnelheid;
     string type;
-    const int lengte;
-    const double maxVersnelling;
-    const double maxSnelheid;
-    const double maxRemFactor;
-    const double minVolgAfstand;
+    int lengte;
+    double maxVersnelling;
+    double maxSnelheid;
+    double maxRemFactor;
+    double minVolgAfstand;
 
 public:
     string getNaamBaan();
     int getPositie();
-    double getSnelheid() const;
+    double getSnelheid();
     void setSnelheid(double snelheid);
-    double getVersnelling() const;
+    double getVersnelling();
     void setVersnelling(double versnelling);
-    double getMaxSnelheid() const;
-    double getGewensteMaxSnelheid() const;
+    double getMaxSnelheid();
+    double getGewensteMaxSnelheid();
     void setGewensteMaxSnelheid(double gewenste_v_max);
-    double getMaxRemFactor() const;
-    double getMinVolgAfstand() const;
+    double getMaxRemFactor();
+    double getMinVolgAfstand();
     string getType();
     void setType(string newType);
     void setNaamBaan(string nieuw);
     void setPositie(int nieuw);
-    double getMaxVersnelling() const;
-    int getLengte() const;
+    double getMaxVersnelling();
+    int getLengte();
 
 
 };

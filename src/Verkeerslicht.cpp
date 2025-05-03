@@ -20,6 +20,9 @@ void Verkeerslicht::setPositie(double nieuw) {
         positie = nieuw;
 }
 
+int Verkeerslicht::getCyclus() {
+    return cyclus;
+}
 /**
  * @brief Zet de cyclusduur van het verkeerslicht
  * @param nieuw De nieuwe cyclusduur in seconden

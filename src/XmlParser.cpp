@@ -30,7 +30,7 @@ vector<Voertuig> XmlParser::getParsedVoertuigen() {
 }
 
 Baan* XmlParser::getRelevanteBaan(const string& baannaam) {
-    for (int i=0; i < getParsedBanen().size(); i++) {
+    for (unsigned int i=0; i < getParsedBanen().size(); i++) {
         if (getParsedBanen()[i].getNaamBaan() == baannaam) {
             return &getParsedBanen()[i];
         }
@@ -246,4 +246,6 @@ void XmlParser::parse() {
         }
     }
     setParsedVerkeerslichten(tempVerkeerslichten);
+
+    doc.Clear();
 }

@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-double Voertuig::getSnelheid() const {
+double Voertuig::getSnelheid() {
     return snelheid;
 }
 
@@ -11,7 +11,7 @@ void Voertuig::setSnelheid(double snelheid) {
     this->snelheid = snelheid;
 }
 
-double Voertuig::getVersnelling() const {
+double Voertuig::getVersnelling() {
     return versnelling;
 }
 
@@ -19,11 +19,11 @@ void Voertuig::setVersnelling(double versnelling) {
     this->versnelling = versnelling;
 }
 
-double Voertuig::getMaxSnelheid() const {
+double Voertuig::getMaxSnelheid() {
     return maxSnelheid;
 }
 
-double Voertuig::getGewensteMaxSnelheid() const {
+double Voertuig::getGewensteMaxSnelheid() {
     return gewensteMaxSnelheid;
 }
 
@@ -31,15 +31,15 @@ void Voertuig::setGewensteMaxSnelheid(double gewenste_v_max) {
     gewensteMaxSnelheid = gewenste_v_max;
 }
 
-double Voertuig::getMaxRemFactor() const {
+double Voertuig::getMaxRemFactor() {
     return maxRemFactor;
 }
 
-double Voertuig::getMinVolgAfstand() const {
+double Voertuig::getMinVolgAfstand() {
     return minVolgAfstand;
 }
 
-double Voertuig::getMaxVersnelling() const {
+double Voertuig::getMaxVersnelling() {
     return maxVersnelling;
 }
 
@@ -67,7 +67,7 @@ void Voertuig::setType(string t) {
     type  = t;
 }
 
-int Voertuig::getLengte() const {
+int Voertuig::getLengte(){
     return lengte;
 }
 

@@ -1,1 +1,25 @@
 # ninja log v6
+18	445	7679787075285563	build.ninja	f4ccf988e4667ef2
+29	421	7679766669415156	CMakeFiles/system2_0.dir/src/Baan.cpp.obj	6e9eacd76ab225a8
+26	1328	7679772330448543	CMakeFiles/system2_0.dir/src/tinyxml.cpp.obj	96c039b85e8f2624
+28	416	7679780610751567	CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj	336a0cfbcc7c76fc
+51	420	7679766669635643	CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj	e3b56555ffdeda4b
+1673	2588	7679780627193629	verkeers_tests.exe	a3e62bddb3d4b434
+30	513	7679770893222424	CMakeFiles/system2_0.dir/src/Voertuig.cpp.obj	4d850184534a70d2
+46	495	7679766669582516	CMakeFiles/system2_0.dir/src/Verkeerslicht.cpp.obj	ee23230c0581a6e
+5	100	7679776438498104	CMakeFiles/system2_0.dir/main.cpp.obj	c7c8a87685be1e79
+23	1747	7679770893151810	CMakeFiles/system2_0.dir/src/XmlParser.cpp.obj	93d4fffae0003727
+25	561	7679775106194568	CMakeFiles/system2_0.dir/src/tinyxmlparser.cpp.obj	f12e08d66686b269
+29	158	7679775106234557	CMakeFiles/system2_0.dir/src/tinyxmlerror.cpp.obj	8decd9e7ecd9997b
+22	188	7679775106164546	CMakeFiles/system2_0.dir/src/tinystr.cpp.obj	b873c0dd456f3b0f
+101	291	7679776439534177	system2_0.exe	449dffe22dd0339b
+7	1103	7679777821070811	CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj	849d73fad4f8a749
+19	1425	7679779117242552	CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj	539d9887c4f618ea
+47	1041	7679780610931481	CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj	d87ea6fc27237e02
+60	219	7679780611067979	CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj	7b89ded955c33a4d
+32	1673	7679780610781588	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
+50	250	7679780610973556	CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj	f9c812a7479e0356
+43	399	7679780610891379	CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj	a1cc8b7b48572d2a
+39	532	7679780610854387	CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj	3dd4aaa67e67a7e
+36	597	7679780610814430	CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj	ee62c4cb13a97782
+55	672	7679780611024001	CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj	ad51d6eddb33d35b
