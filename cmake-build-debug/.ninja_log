@@ -29,3 +29,8 @@
 1781	2638	7679797018069320	verkeers_tests.exe	a3e62bddb3d4b434
 30	1802	7679797253836662	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
 1803	2646	7679797271565889	verkeers_tests.exe	a3e62bddb3d4b434
+13	397	7679808231290908	CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj	e3b56555ffdeda4b
+44	571	7679917436499673	CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj	a1cc8b7b48572d2a
+38	2044	7679917436444550	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
+27	1378	7679917807862987	CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj	539d9887c4f618ea
+1378	2185	7679917821378288	verkeers_tests.exe	a3e62bddb3d4b434

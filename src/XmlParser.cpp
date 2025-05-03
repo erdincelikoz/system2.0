@@ -74,6 +74,7 @@ void XmlParser::parse() {
     vector<Baan> tempBanen;
     vector<Voertuig> tempVoertuigen;
     vector<Verkeerslicht> tempVerkeerslichten;
+    vector<Voertuiggenerator> tempVoertuiggeneratoren;
     for (TiXmlElement* element = root-> FirstChildElement(); element != NULL; element = element->NextSiblingElement()) {
         string elementType = element-> Value();
 
@@ -110,8 +111,7 @@ void XmlParser::parse() {
             int lengte = stoi(lengteElement->GetText());
 
             if (lengte < 0 || naam == "") {
-                cerr << "[Ongeldige informatie]" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
-                continue;
+                throw invalid_argument("Baan lengte is leeg of negatief");
             }
 
             Baan temp(naam,lengte);
@@ -140,22 +140,18 @@ void XmlParser::parse() {
             }
 
             if (typeElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
 
             if (baanNaamElement->GetText() == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
 
             if (positieElement->GetText() == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
 
             if (typeElement->GetText() == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
 
