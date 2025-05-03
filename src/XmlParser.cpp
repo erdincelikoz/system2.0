@@ -16,6 +16,12 @@ void XmlParser::setParsedBanen(vector<Baan> tempBanen) {
 void XmlParser::setParsedVoertuigen(vector<Voertuig> tempVoertuigen) {
     parsedVoertuigen = tempVoertuigen;
 }
+vector<Verkeerslicht> XmlParser::getParsedVerkeerslichten() const {
+    return parsedVerkeerslicht;
+}
+void XmlParser::setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_verkeerslicht) {
+    parsedVerkeerslicht = parsed_verkeerslicht;
+}
 vector<Baan> XmlParser::getParsedBanen() {
     return parsedBanen;
 }
@@ -69,7 +75,18 @@ void XmlParser::parse() {
                 cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
+
             if (naamElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (naamElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (lengteElement->GetText() == nullptr) {
                 cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
@@ -79,14 +96,10 @@ void XmlParser::parse() {
             string naam = naamElement->GetText();
             int lengte = stoi(lengteElement->GetText());
 
-
-
             if (lengte < 0 || naam == "") {
                 cerr << "[Ongeldige informatie]" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
                 continue;
             }
-
-
 
             Baan temp(naam,lengte);
             tempBanen.push_back(temp);
@@ -112,11 +125,26 @@ void XmlParser::parse() {
                 cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
+
             if (typeElement == nullptr) {
                 cerr << "[Onherkenbaar element]" << endl;
                 continue;
             }
 
+            if (baanNaamElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (positieElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (typeElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
 
 
             string baanNaam = baanNaamElement->GetText();
@@ -126,6 +154,54 @@ void XmlParser::parse() {
             tempVoertuigen.push_back(temp);
         }
 
+        if (elementType == "VERKEERSLICHT") {
+            TiXmlElement* baanNaamElement = element->FirstChildElement("baan");
+            TiXmlElement* positieElement = element->FirstChildElement("positie");
+            TiXmlElement* cyclusElement = element-> FirstChildElement("cyclus");
+
+
+
+            if (baanNaamElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (positieElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (cyclusElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (baanNaamElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (positieElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (cyclusElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+            string baanNaam = baanNaamElement->GetText();
+            int positie = stoi(positieElement->GetText());
+            int cyclus = stoi(cyclusElement->GetText());
+
+            if (cyclus < 0) {
+                cerr << "[Ongeldige informatie]" << endl;
+                continue;
+            }
+
+            Verkeerslicht temp(baanNaam, positie, cyclus);
+            tempVerkeerslichten.push_back(temp);
+        }
     }
     //Parsed baan
     setParsedBanen(tempBanen);
@@ -154,4 +230,20 @@ void XmlParser::parse() {
     setParsedVoertuigen(tempVoertuigen);
 
 
+    //Parsed Verkeerslicht
+    for (int i=tempVerkeerslichten.size()-1; i >= 0 ; i--) {
+        Verkeerslicht* temp = &tempVerkeerslichten[i];
+        if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
+            tempVerkeerslichten.erase(tempVerkeerslichten.begin()+i);
+            cerr << "[Ongeldige informatie]" << endl;
+            continue;
+        }
+        if (temp->getPositie() < 0 ||
+                temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
+            tempVerkeerslichten.erase(tempVerkeerslichten.begin()+i);
+            cerr << "[Ongeldige informatie]" << endl;
+            continue;
+        }
+    }
+    setParsedVerkeerslichten(tempVerkeerslichten);
 }
