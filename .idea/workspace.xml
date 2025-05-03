@@ -8,6 +8,7 @@
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
+    <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
   </component>
   <component name="CMakePresetLoader">{
   &quot;useNewFormat&quot;: true
@@ -30,26 +31,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;">
-      <change afterPath="$PROJECT_DIR$/tests/VoertuigTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
+    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="GTEST!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-7aa295ce9f69db8fe322.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-8291258f1d0b8bb78aa0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2025-05-02T12-25-32-0257.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-system2_0-Debug-577b3583225ac13bf642.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Verkeerslicht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verkeerslicht.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Voertuig.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuig.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Voertuig.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuig.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XmlParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.h" afterDir="false" />
+    </list>
+    <list id="054ffcc1-0baa-43ab-b043-b3553b8b7014" name="Changes by rajle" comment="">
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/XmlParserTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +67,26 @@
     &quot;accountId&quot;: &quot;034c5c5f-7e1a-4ba2-9f5b-03bda2c7efa2&quot;
   }
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/XmlParser.cpp">
+      <ranges>
+        <range start1="7" end1="7" start2="7" end2="8" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="31" end1="31" start2="32" end2="40" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="39" end1="39" start2="48" end2="49" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="66" end1="66" start2="76" end2="77" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="77" end1="78" start2="88" end2="88" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="82" end1="83" start2="92" end2="92" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="87" end1="88" start2="96" end2="96" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="92" end1="93" start2="100" end2="100" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="102" end1="103" start2="109" end2="109" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
+        <range start1="207" end1="207" start2="213" end2="264" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="225" end1="226" start2="282" end2="283" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="230" end1="231" start2="287" end2="288" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="248" end1="249" start2="305" end2="306" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="252" end1="252" start2="309" end2="326" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+      </ranges>
+    </file>
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
@@ -159,7 +171,7 @@
       <updated>1746129119765</updated>
       <workItem from="1746129121513" duration="8688000" />
       <workItem from="1746191914103" duration="29412000" />
-      <workItem from="1746269916618" duration="5563000" />
+      <workItem from="1746269916618" duration="9425000" />
     </task>
     <task id="LOCAL-00001" summary="Added functional constructor to Verkeerslicht.cpp">
       <option name="closed" value="true" />
@@ -177,7 +189,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746237952819</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GTEST!">
+      <option name="closed" value="true" />
+      <created>1746275557004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746275557004</updated>
+    </task>
+    <task id="LOCAL-00004" summary="GTEST!">
+      <option name="closed" value="true" />
+      <created>1746277007404</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746277007404</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +219,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added functional constructor to Verkeerslicht.cpp" />
     <MESSAGE value="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;" />
-    <option name="LAST_COMMIT_MESSAGE" value="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;" />
+    <MESSAGE value="GTEST!" />
+    <option name="LAST_COMMIT_MESSAGE" value="GTEST!" />
   </component>
 </project>

@@ -3,6 +3,7 @@
 #include "Baan.h"
 #include "Voertuig.h"
 #include "Verkeerslicht.h"
+#include "Voertuiggenerator.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -14,8 +15,13 @@ private:
     vector<Baan> parsedBanen;
     vector<Voertuig> parsedVoertuigen;
     vector<Verkeerslicht> parsedVerkeerslicht;
+    vector<Voertuiggenerator> parsedVoertuiggenerator;
 
 public:
+    vector<Voertuiggenerator> getParsedVoertuiggeneratoren() const;
+
+    void setParsedVoertuiggeneratoren(const vector<Voertuiggenerator> &parsed_voertuiggenerator);
+
     XmlParser(string inputnaam);
 
     void setParsedBanen(vector<Baan>);

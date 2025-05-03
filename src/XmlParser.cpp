@@ -5,6 +5,7 @@
 #include "Baan.h"
 #include "Voertuig.h"
 #include "Verkeerslicht.h"
+#include "Voertuiggenerator.h"
 using namespace std;
 
 XmlParser::XmlParser(string inputnaam) {
@@ -29,6 +30,14 @@ vector<Voertuig> XmlParser::getParsedVoertuigen() {
     return parsedVoertuigen;
 }
 
+vector<Voertuiggenerator> XmlParser::getParsedVoertuiggeneratoren() const {
+    return parsedVoertuiggenerator;
+}
+
+void XmlParser::setParsedVoertuiggeneratoren(const vector<Voertuiggenerator> &parsed_voertuiggenerator) {
+    parsedVoertuiggenerator = parsed_voertuiggenerator;
+}
+
 Baan* XmlParser::getRelevanteBaan(const string& baannaam) {
     for (unsigned int i=0; i < getParsedBanen().size(); i++) {
         if (getParsedBanen()[i].getNaamBaan() == baannaam) {
@@ -37,6 +46,7 @@ Baan* XmlParser::getRelevanteBaan(const string& baannaam) {
     }
     return nullptr;
 }
+
 void XmlParser::parse() {
     TiXmlDocument doc(bestandsnaam.c_str());
 
@@ -205,6 +215,57 @@ void XmlParser::parse() {
             Verkeerslicht temp(baanNaam, positie, cyclus);
             tempVerkeerslichten.push_back(temp);
         }
+        if (elementType=="VOERTUIGGENERATOR") {
+
+            TiXmlElement* baanNaamElement = element-> FirstChildElement("baan");
+            TiXmlElement* frequentieElement = element-> FirstChildElement("frequentie");
+            TiXmlElement* typeElement = element-> FirstChildElement("type");
+
+
+
+            if (baanNaamElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (frequentieElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (typeElement == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (baanNaamElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (frequentieElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+            if (typeElement->GetText() == nullptr) {
+                cerr << "[Onherkenbaar element]" << endl;
+                continue;
+            }
+
+
+
+            string baanNaam = baanNaamElement->GetText();
+            int frequentie = stoi(frequentieElement->GetText());
+
+            if (frequentie < 0) {
+                cerr << "[Ongeldige informatie]" << endl;
+                continue;
+            }
+            string type = typeElement->GetText();
+            Voertuiggenerator temp(baanNaam, frequentie, type);
+            tempVoertuiggeneratoren.push_back(temp);
+        }
     }
     //Parsed baan
     setParsedBanen(tempBanen);
@@ -223,12 +284,12 @@ void XmlParser::parse() {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             cerr << "[Ongeldige informatie]" << endl;
             continue;
-        }
+                }
         if (temp->getLengte()==-1 || temp->getMaxVersnelling()==-1 || temp->getMaxSnelheid()==-1 ||
                 temp->getMaxRemFactor()==-1 || temp->getMinVolgAfstand()==-1) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             cerr << "[Ongeldige informatie]" << endl;
-        }
+                }
     }
     setParsedVoertuigen(tempVoertuigen);
 
@@ -246,9 +307,26 @@ void XmlParser::parse() {
             tempVerkeerslichten.erase(tempVerkeerslichten.begin()+i);
             cerr << "[Ongeldige informatie]" << endl;
             continue;
-        }
+                }
     }
     setParsedVerkeerslichten(tempVerkeerslichten);
 
+
+    //Parsed Voertuiggenerator
+    for (int i=tempVoertuiggeneratoren.size()-1; i >= 0 ; i--) {
+        Voertuiggenerator* temp = &tempVoertuiggeneratoren[i];
+        if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
+            tempVoertuiggeneratoren.erase(tempVoertuiggeneratoren.begin()+i);
+            cerr << "[Ongeldige informatie]" << endl;
+            continue;
+        }
+        string type = tempVoertuiggeneratoren[i].getType();
+        if (type != "auto" && type != "bus" && type != "brandweerwagen" && type != "ziekenwagen" && type != "politiecombi") {
+            tempVoertuiggeneratoren.erase(tempVoertuiggeneratoren.begin()+i);
+            cerr << "[Ongeldige informatie]" << endl;
+            continue;
+        }
+    }
+    setParsedVoertuiggeneratoren(tempVoertuiggeneratoren);
     doc.Clear();
 }

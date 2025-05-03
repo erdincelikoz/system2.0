@@ -13,19 +13,21 @@ using namespace std;
 
 class Voertuiggenerator {
 private:
-    string baan;
+    string baanNaam;
     int frequentie;
     string type;
 
 public:
-    string type1() const;
+    Voertuiggenerator(const string &baan, int frequentie, const string &type);
 
-    void set_type(const string &type);
+    string getType() const;
 
-    string getBaan() const;
+    void setType(const string &type);
+
+    string getNaamBaan() const;
     int getFrequentie() const;
 
-    void setBaan(string nieuwBaan);
+    void setBaanNaam(string nieuwBaan);
     void setFrequentie(int nieuwFrequentie);
 };
 
