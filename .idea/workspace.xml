@@ -31,15 +31,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="GTEST!">
+    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="-Added attribute 'type' to class Voertuiggenerator&#10;-Added proper constructor/getters/setters for Voertuiggenerator&#10;-Added Voertuiggenerator XML parsing">
+      <change afterPath="$PROJECT_DIR$/src/Bushalte.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Bushalte.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Kruispunt.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Kruispunt.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/input.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/XmlParserTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
     </list>
-    <list id="054ffcc1-0baa-43ab-b043-b3553b8b7014" name="Changes by rajle" comment="">
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+    <list id="e807f85e-fb39-4c51-9b60-f75096ceca89" name="Changes by rajle" comment="">
       <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/XmlParserTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
     </list>
@@ -67,23 +75,71 @@
     &quot;accountId&quot;: &quot;034c5c5f-7e1a-4ba2-9f5b-03bda2c7efa2&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/XmlParser.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/tests/XmlParserTests.cpp" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/tests/XmlParserTests.cpp">
+      <ranges>
+        <range start1="7" end1="8" start2="7" end2="8" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="9" end1="24" start2="9" end2="9" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="26" end1="32" start2="11" end2="20" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="33" end1="45" start2="21" end2="31" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="46" end1="46" start2="32" end2="44" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="48" end1="51" start2="46" end2="63" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="52" end1="58" start2="64" end2="73" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="60" end1="60" start2="75" end2="76" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="61" end1="61" start2="77" end2="104" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/src/XmlParser.cpp">
       <ranges>
-        <range start1="7" end1="7" start2="7" end2="8" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="31" end1="31" start2="32" end2="40" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="39" end1="39" start2="48" end2="49" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="66" end1="66" start2="76" end2="77" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="77" end1="78" start2="88" end2="88" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="82" end1="83" start2="92" end2="92" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="87" end1="88" start2="96" end2="96" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="92" end1="93" start2="100" end2="100" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="102" end1="103" start2="109" end2="109" changelist="054ffcc1-0baa-43ab-b043-b3553b8b7014" />
-        <range start1="207" end1="207" start2="213" end2="264" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="225" end1="226" start2="282" end2="283" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="230" end1="231" start2="287" end2="288" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="248" end1="249" start2="305" end2="306" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="252" end1="252" start2="309" end2="326" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="20" end1="21" start2="20" end2="21" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="23" end1="24" start2="23" end2="24" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="32" end1="32" start2="32" end2="48" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="77" end1="77" start2="93" end2="95" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="85" end1="100" start2="103" end2="105" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="102" end1="105" start2="107" end2="110" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="107" end1="108" start2="112" end2="115" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="110" end1="111" start2="117" end2="123" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="112" end1="114" start2="124" end2="138" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="128" end1="130" start2="152" end2="152" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="132" end1="134" start2="154" end2="155" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="137" end1="139" start2="158" end2="159" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="142" end1="143" start2="162" end2="163" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="146" end1="147" start2="166" end2="167" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="150" end1="151" start2="170" end2="171" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="154" end1="155" start2="174" end2="175" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="169" end1="171" start2="189" end2="189" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="173" end1="175" start2="191" end2="192" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
+        <range start1="178" end1="180" start2="195" end2="196" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="183" end1="185" start2="199" end2="200" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="188" end1="190" start2="203" end2="204" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="193" end1="195" start2="207" end2="208" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="198" end1="200" start2="211" end2="212" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="206" end1="208" start2="218" end2="219" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="222" end1="224" start2="233" end2="234" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="227" end1="229" start2="237" end2="238" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="232" end1="234" start2="241" end2="242" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="237" end1="239" start2="245" end2="246" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="242" end1="244" start2="249" end2="250" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="247" end1="249" start2="253" end2="254" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="257" end1="259" start2="262" end2="263" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="264" end1="264" start2="268" end2="313" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="265" end1="266" start2="314" end2="318" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="269" end1="269" start2="321" end2="322" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="274" end1="276" start2="327" end2="328" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="280" end1="282" start2="332" end2="333" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="286" end1="287" start2="337" end2="338" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="292" end1="292" start2="343" end2="344" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="297" end1="299" start2="349" end2="350" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="303" end1="306" start2="354" end2="356" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="309" end1="309" start2="359" end2="360" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="315" end1="317" start2="366" end2="367" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="321" end1="323" start2="371" end2="372" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="326" end1="326" start2="375" end2="396" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="328" end1="328" start2="398" end2="399" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
       </ranges>
     </file>
   </component>
@@ -97,7 +153,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2wVaJ50R6C6MHCY44k5Q05l4xo1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -132,13 +190,13 @@
       <recent name="C:\Users\erdin\CLionProjects\system2.0\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Google Test.verkeers_tests">
+  <component name="RunManager" selected="CMake Application.system2_0">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="verkeers_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system2_0" TARGET_NAME="verkeers_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system2_0" RUN_TARGET_NAME="verkeers_tests" TEST_MODE="SUITE_TEST">
+    <configuration name="verkeers_tests" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="system2_0" TARGET_NAME="verkeers_tests" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="system2_0" RUN_TARGET_NAME="verkeers_tests" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -171,7 +229,7 @@
       <updated>1746129119765</updated>
       <workItem from="1746129121513" duration="8688000" />
       <workItem from="1746191914103" duration="29412000" />
-      <workItem from="1746269916618" duration="9425000" />
+      <workItem from="1746269916618" duration="20087000" />
     </task>
     <task id="LOCAL-00001" summary="Added functional constructor to Verkeerslicht.cpp">
       <option name="closed" value="true" />
@@ -205,7 +263,23 @@
       <option name="project" value="LOCAL" />
       <updated>1746277007404</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="-Added attribute 'type' to class Voertuiggenerator&#10;-Added proper constructor/getters/setters for Voertuiggenerator&#10;-Added Voertuiggenerator XML parsing">
+      <option name="closed" value="true" />
+      <created>1746279546435</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746279546435</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Raj added functionality to gtest">
+      <option name="closed" value="true" />
+      <created>1746288725570</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746288725570</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +294,8 @@
     <MESSAGE value="Added functional constructor to Verkeerslicht.cpp" />
     <MESSAGE value="-Added XML parsing of Verkeerslicht&#10;-Added additional check if -&gt;GetText is null to counter something like &lt;baan&gt;&lt;/baan&gt;" />
     <MESSAGE value="GTEST!" />
-    <option name="LAST_COMMIT_MESSAGE" value="GTEST!" />
+    <MESSAGE value="-Added attribute 'type' to class Voertuiggenerator&#10;-Added proper constructor/getters/setters for Voertuiggenerator&#10;-Added Voertuiggenerator XML parsing" />
+    <MESSAGE value="Raj added functionality to gtest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Raj added functionality to gtest" />
   </component>
 </project>

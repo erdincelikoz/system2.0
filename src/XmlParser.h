@@ -4,6 +4,8 @@
 #include "Voertuig.h"
 #include "Verkeerslicht.h"
 #include "Voertuiggenerator.h"
+#include "Bushalte.h"
+#include "Kruispunt.h"
 #include <vector>
 #include <string>
 using namespace std;
@@ -14,10 +16,20 @@ private:
     string bestandsnaam;
     vector<Baan> parsedBanen;
     vector<Voertuig> parsedVoertuigen;
-    vector<Verkeerslicht> parsedVerkeerslicht;
+    vector<Verkeerslicht> parsedVerkeerslichten;
     vector<Voertuiggenerator> parsedVoertuiggenerator;
+    vector<Bushalte> parsedBushaltes;
+    vector<Kruispunt> parsedKruispunten;
 
 public:
+    vector<Bushalte> getParsedBushaltes() const;
+
+    void setParsedBushaltes(const vector<Bushalte> &parsed_bushaltes);
+
+    vector<Kruispunt> getParsedKruispunten() const;
+
+    void setParsedKruispunten(const vector<Kruispunt> &parsed_kruispunten);
+
     vector<Voertuiggenerator> getParsedVoertuiggeneratoren() const;
 
     void setParsedVoertuiggeneratoren(const vector<Voertuiggenerator> &parsed_voertuiggenerator);

@@ -21,6 +21,10 @@ add_executable(system2_0
         src/Voertuiggenerator.cpp src/Voertuiggenerator.h
         src/tinyxml.cpp src/tinystr.cpp
         src/tinyxmlparser.cpp src/tinyxmlerror.cpp
+        src/Bushalte.cpp
+        src/Bushalte.h
+        src/Kruispunt.cpp
+        src/Kruispunt.h
 
 )
 
@@ -37,6 +41,10 @@ add_executable(verkeers_tests
         src/tinystr.cpp
         src/tinyxmlparser.cpp
         src/tinyxmlerror.cpp
+        src/Bushalte.cpp
+        src/Bushalte.h
+        src/Kruispunt.cpp
+        src/Kruispunt.h
 )
 
 # ---------- Link testprogramma met GTest ----------
