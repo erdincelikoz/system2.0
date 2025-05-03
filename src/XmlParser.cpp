@@ -137,7 +137,6 @@ void XmlParser::parse() {
         }
 
 
-
         if (elementType == "VOERTUIG") {
             // Voertuig informatie process
 
@@ -181,6 +180,7 @@ void XmlParser::parse() {
             tempVoertuigen.push_back(temp);
         }
 
+
         if (elementType == "VERKEERSLICHT") {
             TiXmlElement* baanNaamElement = element->FirstChildElement("baan");
             TiXmlElement* positieElement = element->FirstChildElement("positie");
@@ -223,6 +223,8 @@ void XmlParser::parse() {
             Verkeerslicht temp(baanNaam, positie, cyclus);
             tempVerkeerslichten.push_back(temp);
         }
+
+
         if (elementType=="VOERTUIGGENERATOR") {
 
             TiXmlElement* baanNaamElement = element-> FirstChildElement("baan");
@@ -268,6 +270,7 @@ void XmlParser::parse() {
             tempVoertuiggeneratoren.push_back(temp);
         }
 
+
         if (elementType == "Bushalte") {
             TiXmlElement* baanNaamElement = element-> FirstChildElement("baan");
             TiXmlElement* positieElement = element-> FirstChildElement("positie");
@@ -306,11 +309,56 @@ void XmlParser::parse() {
             int wachttijd = stoi(wachttijdElement->GetText());
 
             if (wachttijd < 0) {
-                ///
+                throw invalid_argument("Wachttijd van bushalte is negatief");
             }
 
             Bushalte temp(baanNaam, positie, wachttijd);
             tempBushaltes.push_back(temp);
+        }
+
+
+        if (elementType == "KRUISPUNT") {
+            TiXmlElement* baanElement1 = element->FirstChildElement("baan");
+            TiXmlElement* baanElement2 = baanElement1->NextSiblingElement("baan");
+
+
+
+            if (baanElement1 == nullptr) {
+                throw invalid_argument("KRUISPUNT ontbreekt eerste baan");
+            }
+
+            if (baanElement2 == nullptr) {
+                throw invalid_argument("KRUISPUNT ontbreekt tweede baan");
+            }
+
+            if (baanElement2->NextSiblingElement("baan") != nullptr) {
+                throw invalid_argument("KRUISPUNT bevat meer dan twee banen");
+            }
+
+            if (baanElement1->Attribute("positie") == nullptr) {
+                throw invalid_argument("Eerste baan in kruispunt mist positie-attribuut");
+            }
+            if (baanElement2->Attribute("positie") == nullptr) {
+                throw invalid_argument("Tweede baan in kruispunt mist positie-attribuut");
+            }
+
+            if (baanElement1->GetText()==nullptr) {
+                throw invalid_argument("Naam van eerste baan in kruispunt is leeg");
+            }
+            if (baanElement2->GetText()==nullptr) {
+                throw invalid_argument("Naam van tweede baan in kruispunt is leeg");
+            }
+
+
+
+            string baanNaam1 = baanElement1->GetText();
+            string baanNaam2 = baanElement2->GetText();
+            int positie1 = stoi(baanElement1->Attribute("positie"));
+            int positie2 = stoi(baanElement2->Attribute("positie"));
+            pair<string,int> baan1(baanNaam1, positie1);
+            pair<string,int> baan2(baanNaam2,positie2);
+            Kruispunt temp(baan1,baan2);
+            tempKruispunten.push_back(temp);
         }
     }
 
@@ -382,18 +430,19 @@ void XmlParser::parse() {
         Bushalte* temp = &tempBushaltes[i];
         if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
             tempBushaltes.erase(tempBushaltes.begin()+i);
-            ///
+            throw invalid_argument("Bushalte heeft geen geldige baan");
         }
         if (temp->getPositie() < 0 ||
-                temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
+                temp->getPositie() > getRelevanteBaan(temp->getNaamBaan())->getLengteBaan()) {
             tempBushaltes.erase(tempBushaltes.begin()+i);
-            ///
+            throw invalid_argument("Positie van bushalte is ongeldig");
         }
     }
     setParsedBushaltes(tempBushaltes);
 
 
     //Parsed Kruispunt
+    setParsedKruispunten(tempKruispunten);
 
     doc.Clear();
 }
