@@ -101,35 +101,41 @@ void XmlParser::parse() {
             TiXmlElement* naamElement = element-> FirstChildElement("naam");
             TiXmlElement* lengteElement = element->FirstChildElement("lengte");
 
-
-
-            if (lengteElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+            if (naamElement == nullptr || lengteElement == nullptr) {
+                throw invalid_argument("BAAN element ontbreekt naam of lengte");
             }
 
-            if (naamElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
-            }
-
+            // Check for empty text
             if (naamElement->GetText() == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+                throw invalid_argument("Baan naam is leeg");
             }
 
             if (lengteElement->GetText() == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+                throw invalid_argument("Baan lengte is leeg");
             }
 
-
-
             string naam = naamElement->GetText();
-            int lengte = stoi(lengteElement->GetText());
+            string lengteStr = lengteElement->GetText();
 
-            if (lengte < 0 || naam == "") {
-                throw invalid_argument("Baan lengte is leeg of negatief");
+            // Check voor  lengte string
+            if (lengteStr.empty()) {
+                throw invalid_argument("Baan lengte is leeg");
+            }
+
+            // Convert and validate lengte
+            int lengte;
+            try {
+                lengte = stoi(lengteStr);
+            } catch (const exception& e) {
+                throw invalid_argument("Ongeldige lengte waarde: " + string(e.what()));
+            }
+
+            if (lengte < 0) {
+                throw invalid_argument("Baan lengte is negatief");
+            }
+
+            if (naam.empty()) {
+                throw invalid_argument("Baan naam is leeg");
             }
 
             Baan temp(naam,lengte);
@@ -144,32 +150,28 @@ void XmlParser::parse() {
             TiXmlElement* positieElement = element-> FirstChildElement("positie");
             TiXmlElement* typeElement = element-> FirstChildElement("type");
 
-
-
             if (baanNaamElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+                throw invalid_argument("VOERTUIG element ontbreekt baannaam");
             }
 
             if (positieElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+                throw invalid_argument("VOERTUIG element ontbreekt positie");
             }
 
             if (typeElement == nullptr) {
-                continue;
+                throw invalid_argument("VOERTUIG element ontbreekt type");
             }
 
             if (baanNaamElement->GetText() == nullptr) {
-                continue;
+                throw invalid_argument("Baannaam van het voertuig is leeg");
             }
 
             if (positieElement->GetText() == nullptr) {
-                continue;
+                throw invalid_argument("Positie van het voertuig is leeg");
             }
 
             if (typeElement->GetText() == nullptr) {
-                continue;
+                throw invalid_argument("Type van het voertuig is leeg");
             }
 
 
@@ -186,38 +188,35 @@ void XmlParser::parse() {
             TiXmlElement* positieElement = element->FirstChildElement("positie");
             TiXmlElement* cyclusElement = element-> FirstChildElement("cyclus");
 
-
-
             if (baanNaamElement == nullptr) {
-                cerr << "[Onherkenbaar element]" << endl;
-                continue;
+                throw invalid_argument("VERKEERSLICHT element ontbreekt baannaam");
             }
 
             if (positieElement == nullptr) {
-                ///
+                throw invalid_argument("VERKEERSLICHT element ontbreekt positie");
             }
 
             if (cyclusElement == nullptr) {
-                ///
+                throw invalid_argument("VERKEERSLICHT element ontbreekt cyclus");
             }
 
             if (baanNaamElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Baannaam van het verkeerslicht is leeg");
             }
 
             if (positieElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Positie van het verkeerslicht is leeg");
             }
 
             if (cyclusElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Cyclus van het verkeerslicht is leeg");
             }
             string baanNaam = baanNaamElement->GetText();
             int positie = stoi(positieElement->GetText());
             int cyclus = stoi(cyclusElement->GetText());
 
             if (cyclus < 0) {
-                ///
+                throw invalid_argument("Cyclus van verkeerslicht is negatief");
             }
 
             Verkeerslicht temp(baanNaam, positie, cyclus);
@@ -234,36 +233,35 @@ void XmlParser::parse() {
 
 
             if (baanNaamElement == nullptr) {
-                ///
+                throw invalid_argument("VOERTUIGGENERATOR element ontbreekt baannaam");
             }
 
             if (frequentieElement == nullptr) {
-                ///
+                throw invalid_argument("VOERTUIGGENERATOR element ontbreekt frequentie");
             }
 
             if (typeElement == nullptr) {
-                ///
+                throw invalid_argument("VOERTUIGGENERATOR element ontbreekt type");
             }
 
             if (baanNaamElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Baannaam van de voertuiggenerator is leeg");
             }
 
             if (frequentieElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Frequentie van de voertuiggenerator is leeg");
             }
 
             if (typeElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Type van de voertuiggenerator is leeg");
             }
-
 
 
             string baanNaam = baanNaamElement->GetText();
             int frequentie = stoi(frequentieElement->GetText());
 
             if (frequentie < 0) {
-                ///
+                throw invalid_argument("Frequentie van de voertuiggenerator is negatief");
             }
             string type = typeElement->GetText();
             Voertuiggenerator temp(baanNaam, frequentie, type);
@@ -279,29 +277,28 @@ void XmlParser::parse() {
 
 
             if (baanNaamElement == nullptr) {
-                ///
+                throw invalid_argument("BUSHALTE element ontbreekt baannaam");
             }
 
             if (positieElement == nullptr) {
-                ///
+                throw invalid_argument("BUSHALTE element ontbreekt positie");
             }
 
             if (wachttijdElement == nullptr) {
-                ///
+                throw invalid_argument("BUSHALTE element ontbreekt wachttijd");
             }
 
             if (baanNaamElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Baannaam van de bushalte is leeg");
             }
 
             if (positieElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Positie van de bushalte is leeg");
             }
 
             if (wachttijdElement->GetText() == nullptr) {
-                ///
+                throw invalid_argument("Wachttijd van de bushalte is leeg");
             }
-
 
 
             string baanNaam = baanNaamElement->GetText();
@@ -374,17 +371,17 @@ void XmlParser::parse() {
         Voertuig* temp = &tempVoertuigen[i];
         if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
-            ///
+            throw invalid_argument("Voertuig heeft geen geldige baan");
         }
         if (temp->getPositie() < 0 ||
                 temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
-            ///
+            throw invalid_argument("Positie van voertuig is ongeldig");
                 }
         if (temp->getLengte()==-1 || temp->getMaxVersnelling()==-1 || temp->getMaxSnelheid()==-1 ||
                 temp->getMaxRemFactor()==-1 || temp->getMinVolgAfstand()==-1) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
-            ///
+            throw invalid_argument("Voertuig heeft ongeldige parameters");
                 }
     }
     setParsedVoertuigen(tempVoertuigen);
@@ -396,12 +393,12 @@ void XmlParser::parse() {
         Verkeerslicht* temp = &tempVerkeerslichten[i];
         if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
             tempVerkeerslichten.erase(tempVerkeerslichten.begin()+i);
-            ///
+            throw invalid_argument("Verkeerslicht heeft geen geldige baan");
         }
         if (temp->getPositie() < 0 ||
                 temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
             tempVerkeerslichten.erase(tempVerkeerslichten.begin()+i);
-            ///
+            throw invalid_argument("Positie van verkeerslicht is ongeldig");
         }
     }
     setParsedVerkeerslichten(tempVerkeerslichten);
@@ -413,12 +410,12 @@ void XmlParser::parse() {
         Voertuiggenerator* temp = &tempVoertuiggeneratoren[i];
         if (getRelevanteBaan(temp->getNaamBaan()) == nullptr) {
             tempVoertuiggeneratoren.erase(tempVoertuiggeneratoren.begin()+i);
-            ///
+            throw invalid_argument("Voertuiggenerator heeft geen geldige baan");
         }
         string type = tempVoertuiggeneratoren[i].getType();
         if (type != "auto" && type != "bus" && type != "brandweerwagen" && type != "ziekenwagen" && type != "politiecombi") {
             tempVoertuiggeneratoren.erase(tempVoertuiggeneratoren.begin()+i);
-            ///
+            throw invalid_argument("Type van voertuiggenerator is ongeldig");
         }
     }
     setParsedVoertuiggeneratoren(tempVoertuiggeneratoren);
