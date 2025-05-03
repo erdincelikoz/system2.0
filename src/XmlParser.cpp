@@ -45,15 +45,18 @@ void XmlParser::parse() {
     //Checks voor geldigheid voordat we parsen
     if (!doc.LoadFile()) {
         cerr << "Failed to load file" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
+        exit(-1);
     }
     // Get Root element van XML file
     TiXmlElement* root = doc.FirstChildElement();
     if (!root) {
         cerr << "No root element found" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
+        exit(-2);
     }
 
     if (root->FirstChildElement() == NULL) {
         cerr << "No  element found" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
+        exit(-3);
     }
 
 

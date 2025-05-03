@@ -10,6 +10,14 @@ Voertuiggenerator::Voertuiggenerator(string newBaan, int newFrequentie) {
     setFrequentie(newFrequentie);
 }
 
+string Voertuiggenerator::getype() const {
+    return type;
+}
+
+void Voertuiggenerator::set_type(const string &type) {
+    this->type = type;
+}
+
 string Voertuiggenerator::getBaan() const {
     return baan;
 }

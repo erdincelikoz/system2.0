@@ -23,3 +23,9 @@
 39	532	7679780610854387	CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj	3dd4aaa67e67a7e
 36	597	7679780610814430	CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj	ee62c4cb13a97782
 55	672	7679780611024001	CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj	ad51d6eddb33d35b
+24	2243	7679794236583878	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
+2244	3221	7679794258769677	verkeers_tests.exe	a3e62bddb3d4b434
+4	1781	7679797000297043	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
+1781	2638	7679797018069320	verkeers_tests.exe	a3e62bddb3d4b434
+30	1802	7679797253836662	CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj	6cfca07b59521c5
+1803	2646	7679797271565889	verkeers_tests.exe	a3e62bddb3d4b434

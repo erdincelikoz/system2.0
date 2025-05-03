@@ -15,14 +15,12 @@ class Voertuiggenerator {
 private:
     string baan;
     int frequentie;
+    string type;
 
 public:
-    /**
-     * @brief Constructor voor Voertuiggenerator
-     * @param newBaan Naam van de baan waarop voertuigen worden gegenereerd
-     * @param newFrequentie Hoe vaak voertuigen gegenereerd worden
-     */
-    Voertuiggenerator(string newBaan, int newFrequentie);
+    string type1() const;
+
+    void set_type(const string &type);
 
     string getBaan() const;
     int getFrequentie() const;
