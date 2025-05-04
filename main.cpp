@@ -1,7 +1,7 @@
+#include "Simulatie.h"
 #include "XmlParser.h"
 
 int main() {
-    XmlParser parser("src/input.xml");
-    parser.parse();
+    runSimulation();
     return 0;
 }

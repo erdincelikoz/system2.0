@@ -8,7 +8,7 @@
 
     <VOERTUIG>
         <baan>Middelheimlaan</baan>
-        <positie>20</positie>
+        <positie>100</positie>
         <type>bus</type>
     </VOERTUIG>
 
@@ -32,7 +32,7 @@
 
     <BAAN>
         <naam>Middelheimlaan</naam>
-        <lengte>20</lengte>
+        <lengte>2000</lengte>
     </BAAN>
 
     <VERKEERSLICHT>

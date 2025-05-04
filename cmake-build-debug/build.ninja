@@ -133,6 +133,20 @@ build CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__system2_0_un
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
 
+build CMakeFiles/system2_0.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp || cmake_object_order_depends_target_system2_0
+  DEP_FILE = CMakeFiles\system2_0.dir\src\VoertuigRijden.cpp.obj.d
+  FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  OBJECT_DIR = CMakeFiles\system2_0.dir
+  OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+
+build CMakeFiles/system2_0.dir/src/Simulatie.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp || cmake_object_order_depends_target_system2_0
+  DEP_FILE = CMakeFiles\system2_0.dir\src\Simulatie.cpp.obj.d
+  FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  OBJECT_DIR = CMakeFiles\system2_0.dir
+  OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target system2_0
@@ -141,7 +155,7 @@ build CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__system2_0_un
 #############################################
 # Link the executable system2_0.exe
 
-build system2_0.exe: CXX_EXECUTABLE_LINKER__system2_0_Debug CMakeFiles/system2_0.dir/main.cpp.obj CMakeFiles/system2_0.dir/src/Baan.cpp.obj CMakeFiles/system2_0.dir/src/XmlParser.cpp.obj CMakeFiles/system2_0.dir/src/Voertuig.cpp.obj CMakeFiles/system2_0.dir/src/Verkeerslicht.cpp.obj CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/system2_0.dir/src/tinyxml.cpp.obj CMakeFiles/system2_0.dir/src/tinystr.cpp.obj CMakeFiles/system2_0.dir/src/tinyxmlparser.cpp.obj CMakeFiles/system2_0.dir/src/tinyxmlerror.cpp.obj CMakeFiles/system2_0.dir/src/Bushalte.cpp.obj CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj
+build system2_0.exe: CXX_EXECUTABLE_LINKER__system2_0_Debug CMakeFiles/system2_0.dir/main.cpp.obj CMakeFiles/system2_0.dir/src/Baan.cpp.obj CMakeFiles/system2_0.dir/src/XmlParser.cpp.obj CMakeFiles/system2_0.dir/src/Voertuig.cpp.obj CMakeFiles/system2_0.dir/src/Verkeerslicht.cpp.obj CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/system2_0.dir/src/tinyxml.cpp.obj CMakeFiles/system2_0.dir/src/tinystr.cpp.obj CMakeFiles/system2_0.dir/src/tinyxmlparser.cpp.obj CMakeFiles/system2_0.dir/src/tinyxmlerror.cpp.obj CMakeFiles/system2_0.dir/src/Bushalte.cpp.obj CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj CMakeFiles/system2_0.dir/src/VoertuigRijden.cpp.obj CMakeFiles/system2_0.dir/src/Simulatie.cpp.obj
   FLAGS = -Wall -Werror -O2 -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\system2_0.dir
@@ -251,6 +265,13 @@ build CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__verkeer
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
 
+build CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp || cmake_object_order_depends_target_verkeers_tests
+  DEP_FILE = CMakeFiles\verkeers_tests.dir\src\VoertuigRijden.cpp.obj.d
+  FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  OBJECT_DIR = CMakeFiles\verkeers_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target verkeers_tests
@@ -259,7 +280,7 @@ build CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__verkeer
 #############################################
 # Link the executable verkeers_tests.exe
 
-build verkeers_tests.exe: CXX_EXECUTABLE_LINKER__verkeers_tests_Debug CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj | C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest.a C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest_main.a
+build verkeers_tests.exe: CXX_EXECUTABLE_LINKER__verkeers_tests_Debug CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj | C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest.a C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest_main.a
   FLAGS = -Wall -Werror -O2 -g
   LINK_LIBRARIES = C:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest.a  C:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest_main.a  -lpthread  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir

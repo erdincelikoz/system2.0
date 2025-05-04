@@ -1,7 +1,3 @@
-//
-// Created by erdin on 5/3/2025.
-//
-
 #include "Bushalte.h"
 
 string Bushalte::getNaamBaan() const {

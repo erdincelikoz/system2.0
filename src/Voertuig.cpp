@@ -51,11 +51,11 @@ void Voertuig::setNaamBaan(string nieuw) {
     baan = nieuw;
 }
 
-int Voertuig::getPositie() {
+double Voertuig::getPositie() {
     return positie;
 }
 
-void Voertuig::setPositie(int nieuw){
+void Voertuig::setPositie(double nieuw){
     positie = nieuw;
 }
 
@@ -69,6 +69,13 @@ void Voertuig::setType(string t) {
 
 int Voertuig::getLengte(){
     return lengte;
+}
+
+vector<Voertuig> Voertuig::sortVoertuigen(vector<Voertuig> voertuigen) {
+    sort(voertuigen.begin(), voertuigen.end(), [](Voertuig a, Voertuig b) {
+        return a.getPositie() > b.getPositie();
+    });
+    return voertuigen;
 }
 
 Voertuig::Voertuig(const string &baan, int positie, const string &type):

@@ -9,6 +9,8 @@
 #define VOERTUIG_H
 
 #include <string>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
 /**
@@ -20,7 +22,7 @@ public:
 
 private:
     string baan;
-    int positie;
+    double positie;
     double snelheid;
     double versnelling;
     double gewensteMaxSnelheid;
@@ -33,7 +35,7 @@ private:
 
 public:
     string getNaamBaan();
-    int getPositie();
+    double getPositie();
     double getSnelheid();
     void setSnelheid(double snelheid);
     double getVersnelling();
@@ -46,7 +48,7 @@ public:
     string getType();
     void setType(string newType);
     void setNaamBaan(string nieuw);
-    void setPositie(int nieuw);
+    void setPositie(double nieuw);
     double getMaxVersnelling();
     int getLengte();
 

@@ -26,7 +26,8 @@ void XmlParser::setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_ver
 vector<Baan> XmlParser::getParsedBanen() {
     return parsedBanen;
 }
-vector<Voertuig> XmlParser::getParsedVoertuigen() {
+
+vector<Voertuig> &XmlParser::getParsedVoertuigen() {
     return parsedVoertuigen;
 }
 
@@ -381,10 +382,10 @@ void XmlParser::parse() {
         if (temp->getLengte()==-1 || temp->getMaxVersnelling()==-1 || temp->getMaxSnelheid()==-1 ||
                 temp->getMaxRemFactor()==-1 || temp->getMinVolgAfstand()==-1) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
-            throw invalid_argument("Voertuig heeft ongeldige parameters");
+            throw invalid_argument("Voertuig heeft ongeldige type");
                 }
     }
-    setParsedVoertuigen(tempVoertuigen);
+    setParsedVoertuigen(Voertuig::sortVoertuigen(tempVoertuigen));
 
 
 

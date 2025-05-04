@@ -25,6 +25,12 @@ add_executable(system2_0
         src/Bushalte.h
         src/Kruispunt.cpp
         src/Kruispunt.h
+        src/VoertuigRijden.cpp
+        src/VoertuigRijden.h
+        src/Simulatie.cpp
+        src/Simulatie.h
+        src/Simulatie.cpp
+        src/Simulatie.h
 
 )
 
@@ -45,6 +51,8 @@ add_executable(verkeers_tests
         src/Bushalte.h
         src/Kruispunt.cpp
         src/Kruispunt.h
+        src/VoertuigRijden.cpp
+        src/VoertuigRijden.h
 )
 
 # ---------- Link testprogramma met GTest ----------

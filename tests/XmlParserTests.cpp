@@ -4,22 +4,34 @@
 // Test dat een XML-bestand correct geparsed wordt
 
 
-TEST(XmlParserTest, ParseValidXmlFile) {
-    XmlParser parser("src/input.xml");
-    parser.parse();
-}
+//----------------------------------------------TEMPLATE--------------------------------------------------
+TEST(XmlParserTest, MissingBaanNaamOfLengte) {                                                          //
+    XmlParser parser ("src/input.xml");                                                     //
+                                                                                                        //
+    try {                                                                                               //
+        parser.parse();                                                                                 //
+                                                                                                        //
+    } catch (const invalid_argument& exception) {                                                       //
+        if (std::string(exception.what()) == "BAAN element ontbreekt naam of lengte") {               //
+            FAIL();                                                                                     //
+        }                                                                                               //
+    }                                                                                                   //
+}                                                                                                       //
+//--------------------------------------------------------------------------------------------------------
 
-TEST(XmlParserTest, MissingBaanNaamOfLengte) {
-    XmlParser parser ("src/input.xml");
+
+TEST(XmlParserTest, LeegBaanNaam) {
+    XmlParser parser("src/input.xml");
 
     try {
         parser.parse();
         FAIL() << "Expected exception not thrown";
     } catch (const invalid_argument& exception) {
-        EXPECT_STREQ("BAAN element ontbreekt naam of lengte", exception.what());
+        if (std::string(exception.what()) == "Baan naam is leeg") {
+            FAIL();
+        }
     }
 }
-
 TEST(XmlParserTest, LeegBaanLengte) {
     XmlParser parser("src/input.xml");
 
@@ -42,15 +54,40 @@ TEST(XmlParserTest, NegatieveBaanLengte) {
     }
 }
 
+ //======== VOERTUIG========= //
 
-TEST(XmlParsertTest, MissingBaanVoertuig) {
-    XmlParser parser ("tests/test_missingnaam.xml");
-    parser.parse();
-    EXPECT_TRUE(parser.getParsedBanen().empty());
+TEST(XmlParserTest, MissingBaanVoertuig) {
+    XmlParser parser ("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "VOERTUIG element ontbreekt baannaam") {
+            FAIL();
+        }
+    }
 }
-TEST(XmlParsertTest, MissingVoertuig) {
-    XmlParser parser ("tests/test_missingvoertuig");
-    parser.parse();
+
+TEST(XmlParserTest, MissingPositieVoertuig) {
+    XmlParser parser ("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "VOERTUIG element ontbreekt positie") {
+            FAIL();
+        }
+    }
+}
+
+TEST(XmlParserTest, MissingTypeVoertuig) {
+    XmlParser parser ("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "VOERTUIG element ontbreekt type") {
+            FAIL();
+        }
+    }
+}
 
     auto voertuigen = parser.getParsedVoertuigen();
     EXPECT_TRUE(voertuigen.empty());
