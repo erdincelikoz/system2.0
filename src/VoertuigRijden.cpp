@@ -1,9 +1,12 @@
 #include "VoertuigRijden.h"
 #include <cmath>
+#include <iostream>
 
-void VoertuigRijden::updateVoertuigen(vector<Voertuig>& voertuigen) {
+void VoertuigRijden::updateVoertuigen(vector<Voertuig>& voertuigen, int tijd) {
     for (unsigned int i=0; i < voertuigen.size(); i++) {
-        voertuigen[i].setSnelheid(voertuigen[i].getMaxSnelheid());
+        if (tijd==0) {
+            voertuigen[i].setSnelheid(voertuigen[i].getMaxSnelheid());
+        }
         if (voertuigen[i].getSnelheid() + voertuigen[i].getVersnelling()*0.0166 < 0) {
             voertuigen[i].setPositie(voertuigen[i].getPositie()
                                         -(pow(voertuigen[i].getSnelheid(),2))
@@ -31,10 +34,9 @@ void VoertuigRijden::updateVoertuigen(vector<Voertuig>& voertuigen) {
                                         *voertuigen[i].getMaxRemFactor())))))
                                         /volgafstand;
 
-
             voertuigen[i].setVersnelling(voertuigen[i].getMaxVersnelling()
                                             *(1- pow((voertuigen[i].getSnelheid()
-                                            /voertuigen[i].getMaxSnelheid()),4))
+                                            /voertuigen[i].getGewensteMaxSnelheid()),4))
                                             -pow(interactieterm,2));
         }
 
@@ -52,19 +54,19 @@ void VoertuigRijden::updateVoertuigen(vector<Voertuig>& voertuigen) {
                                         /2);
 
         }
+        if (voertuigen[i].getHuidigeBaanLengte() < voertuigen[i].getPositie()) {
+            voertuigen.erase(voertuigen.begin()+i);
+        }
     }
 }
-void VoertuigRijden::vertragen(vector<Voertuig>& voertuigen, double s) {
-    if (voertuigen.size() > 0) {
-        voertuigen[0].setGewensteMaxSnelheid(s * voertuigen[0].getMaxSnelheid());
+void VoertuigRijden::vertragen(vector<Voertuig>& voertuigen) {
+    voertuigen[0].setGewensteMaxSnelheid(0.4 * voertuigen[0].getMaxSnelheid());
 
-    }
 }
 
 void VoertuigRijden::versnellen(vector<Voertuig>& voertuigen) {
     if (voertuigen.size() > 0) {
         voertuigen[0].setGewensteMaxSnelheid(voertuigen[0].getMaxSnelheid());
-
     }
 }
 void VoertuigRijden::stoppen(vector<Voertuig>& voertuigen) {
@@ -73,4 +75,11 @@ void VoertuigRijden::stoppen(vector<Voertuig>& voertuigen) {
 
         voertuigen[j].setVersnelling(versnelling);
     }
+}
+void VoertuigRijden::defineGewensteMaxSnelheid(vector<Voertuig>& voertuigen) {
+    for (unsigned int k = 0; k < voertuigen.size(); k++) {
+        voertuigen[k].setGewensteMaxSnelheid(voertuigen[k].getMaxSnelheid());
+        cout << voertuigen[k].getGewensteMaxSnelheid() << endl;
+    }
+
 }

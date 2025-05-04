@@ -3,21 +3,49 @@
 
 // Test dat een XML-bestand correct geparsed wordt
 
+TEST(XmlParserTest, GeldigDocParser) {
+    XmlParser parser("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "Failed to load file") {
+            FAIL();
+        }
+    }
+}
+TEST(XmlParserTest, RootElementCheckerParser) {
+    XmlParser parser("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "No root element found") {
+            FAIL();
+        }
+    }
+}
+TEST(XmlParserTest, FirstChildCheckerParser) {
+    XmlParser parser("src/input.xml");
+    try {
+        parser.parse();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "No root element found") {
+            FAIL();
+        }
+    }
+}
 
-//----------------------------------------------TEMPLATE--------------------------------------------------
-TEST(XmlParserTest, MissingBaanNaamOfLengte) {                                                          //
-    XmlParser parser ("src/input.xml");                                                     //
-                                                                                                        //
-    try {                                                                                               //
-        parser.parse();                                                                                 //
-                                                                                                        //
-    } catch (const invalid_argument& exception) {                                                       //
-        if (std::string(exception.what()) == "BAAN element ontbreekt naam of lengte") {               //
-            FAIL();                                                                                     //
-        }                                                                                               //
-    }                                                                                                   //
-}                                                                                                       //
-//--------------------------------------------------------------------------------------------------------
+TEST(XmlParserTest, MissingBaanNaamOfLengte) {
+    XmlParser parser ("src/input.xml");
+
+    try {
+        parser.parse();
+
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "BAAN element ontbreekt naam of lengte") {
+            FAIL();
+        }
+    }
+}
 
 
 TEST(XmlParserTest, LeegBaanNaam) {

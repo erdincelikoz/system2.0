@@ -32,8 +32,15 @@ private:
     double maxSnelheid;
     double maxRemFactor;
     double minVolgAfstand;
+    int huidigeBaanLengte;
 
 public:
+    int getHuidigeBaanLengte() const;
+
+    void setHuidigeBaanLengte(int huidige_baan_lengte);
+
+    void setGewensteMaxSnelheid(double gewenste_max_snelheid);
+
     string getNaamBaan();
     double getPositie();
     double getSnelheid();
@@ -42,7 +49,6 @@ public:
     void setVersnelling(double versnelling);
     double getMaxSnelheid();
     double getGewensteMaxSnelheid();
-    void setGewensteMaxSnelheid(double gewenste_v_max);
     double getMaxRemFactor();
     double getMinVolgAfstand();
     string getType();

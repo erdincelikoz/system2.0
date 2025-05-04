@@ -41,7 +41,7 @@ public:
     void setParsedVoertuigen(vector<Voertuig>);
 
     vector<Voertuig> &getParsedVoertuigen();
-    vector<Verkeerslicht> getParsedVerkeerslichten() const;
+    vector<Verkeerslicht> &getParsedVerkeerslichten();
     void setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_verkeerslicht);
     Baan* getRelevanteBaan(const string& baannaam);
     void parse();

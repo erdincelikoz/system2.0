@@ -7,7 +7,7 @@
  */
 #ifndef VERKEERSLICHT_H
 #define VERKEERSLICHT_H
-
+#include <vector>
 #include <string>
 using namespace std;
 
@@ -19,8 +19,11 @@ private:
     string baan;
     double positie;
     int cyclus;
+    bool kleur;
 
 public:
+    bool getKleur();
+    void setKleur(bool kleur);
     string getNaamBaan();
     double getPositie();
     int getCyclus();

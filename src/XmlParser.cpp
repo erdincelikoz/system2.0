@@ -17,7 +17,7 @@ void XmlParser::setParsedBanen(vector<Baan> tempBanen) {
 void XmlParser::setParsedVoertuigen(vector<Voertuig> tempVoertuigen) {
     parsedVoertuigen = tempVoertuigen;
 }
-vector<Verkeerslicht> XmlParser::getParsedVerkeerslichten() const {
+vector<Verkeerslicht>& XmlParser::getParsedVerkeerslichten() {
     return parsedVerkeerslichten;
 }
 void XmlParser::setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_verkeerslicht) {
@@ -71,19 +71,16 @@ void XmlParser::parse() {
 
     //Checks voor geldigheid voordat we parsen
     if (!doc.LoadFile()) {
-        cerr << "Failed to load file" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
-        exit(-1);
+        throw invalid_argument("Failed to load file");
     }
     // Get Root element van XML file
     TiXmlElement* root = doc.FirstChildElement();
     if (!root) {
-        cerr << "No root element found" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
-        exit(-2);
+        throw invalid_argument("No root element found");
     }
 
     if (root->FirstChildElement() == NULL) {
-        cerr << "No  element found" << endl; //moeten weg bij eindresultaat wanneer gtest toegevoegd wordt
-        exit(-3);
+        throw invalid_argument("No  element found");
     }
 
 
@@ -384,6 +381,9 @@ void XmlParser::parse() {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             throw invalid_argument("Voertuig heeft ongeldige type");
                 }
+        Baan* tempBaan = getRelevanteBaan(temp->getNaamBaan());
+        int tempBaanLengte = tempBaan->getLengteBaan();
+        temp->setHuidigeBaanLengte(tempBaanLengte);
     }
     setParsedVoertuigen(Voertuig::sortVoertuigen(tempVoertuigen));
 

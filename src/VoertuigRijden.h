@@ -2,6 +2,7 @@
 #ifndef VOERTUIGRIJDEN_H
 #define VOERTUIGRIJDEN_H
 #include "Voertuig.h"
+#include "XmlParser.h"
 #include <vector>
 
 using namespace std;
@@ -11,13 +12,15 @@ using namespace std;
  */
 class VoertuigRijden {
 public:
-    void updateVoertuigen(vector<Voertuig>& voertuigen);
+    void updateVoertuigen(vector<Voertuig>& voertuigen, int tijd);
 
-    void vertragen(vector<Voertuig>& voertuigen, double s);
+    void vertragen(vector<Voertuig>& voertuigen);
 
     void versnellen(vector<Voertuig>& voertuigen);
 
     void stoppen(vector<Voertuig>& voertuigen);
+
+    static void defineGewensteMaxSnelheid(vector<Voertuig>& voertuigen);
 };
 
 

@@ -1,7 +1,16 @@
 #include "Verkeerslicht.h"
 #include <string>
 #include <iostream>
+#include <vector>
 using namespace std;
+
+bool Verkeerslicht::getKleur(){
+    return kleur;
+}
+
+void Verkeerslicht::setKleur(bool kleur) {
+    this->kleur = kleur;
+}
 
 string Verkeerslicht::getNaamBaan() {
     return baan;

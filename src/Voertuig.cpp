@@ -27,6 +27,14 @@ double Voertuig::getGewensteMaxSnelheid() {
     return gewensteMaxSnelheid;
 }
 
+int Voertuig::getHuidigeBaanLengte() const {
+    return huidigeBaanLengte;
+}
+
+void Voertuig::setHuidigeBaanLengte(int huidige_baan_lengte) {
+    huidigeBaanLengte = huidige_baan_lengte;
+}
+
 void Voertuig::setGewensteMaxSnelheid(double gewenste_v_max) {
     gewensteMaxSnelheid = gewenste_v_max;
 }
@@ -103,3 +111,4 @@ minVolgAfstand(type=="auto" ? 4 : type=="bus" ? 12 : type=="brandweerwagen" ? 10
     setPositie(positie);
     setType(type);
 }
+
