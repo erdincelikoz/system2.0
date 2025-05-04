@@ -51,7 +51,7 @@ public:
     void setPositie(double nieuw);
     double getMaxVersnelling();
     int getLengte();
-
+    static vector<Voertuig> sortVoertuigen(vector<Voertuig> Voertuigen);
 
 };
 
