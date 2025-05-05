@@ -20,10 +20,30 @@ private:
     double lengte;
 
 public:
+    /**
+    * Retourneert naam van de baan
+    * @return De naam van de baan als string
+    */
     string getNaamBaan();
+
+    /**
+    * Retourneert lengte van de baan
+    * @return De lengte van de baan als double
+    */
     double getLengteBaan();
+
+    /**
+     * Setter voor nieuwe naam van de baan
+     * @param nieuw De nieuwe naam van de baan
+     */
     void setNaamBaan(string nieuw);
+
+    /**
+    * Setter voor nieuwe lengte van de baan
+    * @param nieuw De nieuwe lengte van de baan
+    */
     void setLengteBaan(double nieuw);
+
     /**
      * @brief Constructor voor de klasse Baan.
      * @param naam De naam van de baan.

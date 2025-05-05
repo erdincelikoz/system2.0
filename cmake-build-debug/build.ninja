@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = C$:/Users/erdin/CLionProjects/system2.0/cmake-build-debug/
+cmake_ninja_workdir = C$:/Users/erdin/CLionProjects/system2.1/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target system2_0
 
@@ -49,103 +49,131 @@ cmake_ninja_workdir = C$:/Users/erdin/CLionProjects/system2.0/cmake-build-debug/
 
 build cmake_object_order_depends_target_system2_0: phony || .
 
-build CMakeFiles/system2_0.dir/main.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/main.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/main.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/main.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\main.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Baan.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Baan.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Baan.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Baan.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Baan.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/XmlParser.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/XmlParser.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/XmlParser.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/XmlParser.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\XmlParser.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Voertuig.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Voertuig.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Voertuig.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Voertuig.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Voertuig.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Verkeerslicht.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Verkeerslicht.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Verkeerslicht.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Verkeerslicht.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Verkeerslicht.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Voertuiggenerator.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Voertuiggenerator.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Voertuiggenerator.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Voertuiggenerator.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/tinyxml.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxml.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/tinyxml.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxml.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\tinyxml.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/tinystr.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinystr.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/tinystr.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinystr.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\tinystr.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/tinyxmlparser.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxmlparser.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/tinyxmlparser.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxmlparser.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\tinyxmlparser.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/tinyxmlerror.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxmlerror.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/tinyxmlerror.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxmlerror.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\tinyxmlerror.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Bushalte.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Bushalte.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Bushalte.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Bushalte.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Bushalte.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Kruispunt.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Kruispunt.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Kruispunt.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/VoertuigRijden.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\VoertuigRijden.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
-build CMakeFiles/system2_0.dir/src/Simulatie.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp || cmake_object_order_depends_target_system2_0
+build CMakeFiles/system2_0.dir/src/Simulatie.cpp.obj: CXX_COMPILER__system2_0_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Simulatie.cpp || cmake_object_order_depends_target_system2_0
   DEP_FILE = CMakeFiles\system2_0.dir\src\Simulatie.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\system2_0.dir
   OBJECT_FILE_DIR = CMakeFiles\system2_0.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
+  TARGET_PDB = system2_0.pdb
 
 
 # =============================================================================
@@ -161,9 +189,10 @@ build system2_0.exe: CXX_EXECUTABLE_LINKER__system2_0_Debug CMakeFiles/system2_0
   OBJECT_DIR = CMakeFiles\system2_0.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\system2_0.dir\
   TARGET_FILE = system2_0.exe
   TARGET_IMPLIB = libsystem2_0.dll.a
-  TARGET_PDB = system2_0.exe.dbg
+  TARGET_PDB = system2_0.pdb
 
 # =============================================================================
 # Object build statements for EXECUTABLE target verkeers_tests
@@ -174,110 +203,140 @@ build system2_0.exe: CXX_EXECUTABLE_LINKER__system2_0_Debug CMakeFiles/system2_0
 
 build cmake_object_order_depends_target_verkeers_tests: phony || .
 
-build CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/tests/VoertuigTests.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/tests/VoertuigTests.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\tests\VoertuigTests.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/tests/XmlParserTests.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/tests/XmlParserTests.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\tests\XmlParserTests.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\tests
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Baan.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Baan.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Baan.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/XmlParser.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/XmlParser.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\XmlParser.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Voertuig.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Voertuig.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Voertuig.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Verkeerslicht.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Verkeerslicht.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Verkeerslicht.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Voertuiggenerator.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Voertuiggenerator.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Voertuiggenerator.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxml.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxml.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\tinyxml.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinystr.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinystr.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\tinystr.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxmlparser.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxmlparser.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\tinyxmlparser.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/tinyxmlerror.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/tinyxmlerror.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\tinyxmlerror.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Bushalte.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Bushalte.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Bushalte.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Kruispunt.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Kruispunt.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Kruispunt.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/VoertuigRijden.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\VoertuigRijden.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
-build CMakeFiles/verkeers_tests.dir/src/Simulatie.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp || cmake_object_order_depends_target_verkeers_tests
+build CMakeFiles/verkeers_tests.dir/src/Simulatie.cpp.obj: CXX_COMPILER__verkeers_tests_unscanned_Debug C$:/Users/erdin/CLionProjects/system2.1/src/Simulatie.cpp || cmake_object_order_depends_target_verkeers_tests
   DEP_FILE = CMakeFiles\verkeers_tests.dir\src\Simulatie.cpp.obj.d
   FLAGS = -Wall -Werror -O2 -g -std=gnu++11 -fdiagnostics-color=always
-  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.0/src -IC:/Users/erdin/CLionProjects/system2.0/gtest/include
+  INCLUDES = -IC:/Users/erdin/CLionProjects/system2.1/src -IC:/Users/erdin/CLionProjects/system2.1/gtest/include
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   OBJECT_FILE_DIR = CMakeFiles\verkeers_tests.dir\src
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
+  TARGET_PDB = verkeers_tests.pdb
 
 
 # =============================================================================
@@ -287,22 +346,23 @@ build CMakeFiles/verkeers_tests.dir/src/Simulatie.cpp.obj: CXX_COMPILER__verkeer
 #############################################
 # Link the executable verkeers_tests.exe
 
-build verkeers_tests.exe: CXX_EXECUTABLE_LINKER__verkeers_tests_Debug CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj CMakeFiles/verkeers_tests.dir/src/Simulatie.cpp.obj | C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest.a C$:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest_main.a
+build verkeers_tests.exe: CXX_EXECUTABLE_LINKER__verkeers_tests_Debug CMakeFiles/verkeers_tests.dir/tests/VoertuigTests.cpp.obj CMakeFiles/verkeers_tests.dir/tests/XmlParserTests.cpp.obj CMakeFiles/verkeers_tests.dir/src/Baan.cpp.obj CMakeFiles/verkeers_tests.dir/src/XmlParser.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuig.cpp.obj CMakeFiles/verkeers_tests.dir/src/Verkeerslicht.cpp.obj CMakeFiles/verkeers_tests.dir/src/Voertuiggenerator.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxml.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinystr.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlparser.cpp.obj CMakeFiles/verkeers_tests.dir/src/tinyxmlerror.cpp.obj CMakeFiles/verkeers_tests.dir/src/Bushalte.cpp.obj CMakeFiles/verkeers_tests.dir/src/Kruispunt.cpp.obj CMakeFiles/verkeers_tests.dir/src/VoertuigRijden.cpp.obj CMakeFiles/verkeers_tests.dir/src/Simulatie.cpp.obj | C$:/Users/erdin/CLionProjects/system2.1/gtest/lib/libgtest.a C$:/Users/erdin/CLionProjects/system2.1/gtest/lib/libgtest_main.a
   FLAGS = -Wall -Werror -O2 -g
-  LINK_LIBRARIES = C:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest.a  C:/Users/erdin/CLionProjects/system2.0/gtest/lib/libgtest_main.a  -lpthread  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/Users/erdin/CLionProjects/system2.1/gtest/lib/libgtest.a  C:/Users/erdin/CLionProjects/system2.1/gtest/lib/libgtest_main.a  -lpthread  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\verkeers_tests.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
+  TARGET_COMPILE_PDB = CMakeFiles\verkeers_tests.dir\
   TARGET_FILE = verkeers_tests.exe
   TARGET_IMPLIB = libverkeers_tests.dll.a
-  TARGET_PDB = verkeers_tests.exe.dbg
+  TARGET_PDB = verkeers_tests.pdb
 
 
 #############################################
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.0\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.1\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
   DESC = Running tests...
   pool = console
   restat = 1
@@ -314,7 +374,7 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.0\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.1\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -325,7 +385,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.0\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\erdin\CLionProjects\system2.0 -BC:\Users\erdin\CLionProjects\system2.0\cmake-build-debug"
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\erdin\CLionProjects\system2.1\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.3.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\erdin\CLionProjects\system2.1 -BC:\Users\erdin\CLionProjects\system2.1\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -345,7 +405,7 @@ build verkeers_tests: phony verkeers_tests.exe
 # =============================================================================
 
 #############################################
-# Folder: C:/Users/erdin/CLionProjects/system2.0/cmake-build-debug
+# Folder: C:/Users/erdin/CLionProjects/system2.1/cmake-build-debug
 
 build all: phony system2_0.exe verkeers_tests.exe
 
@@ -356,14 +416,14 @@ build all: phony system2_0.exe verkeers_tests.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/erdin/CLionProjects/system2.0/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/erdin/CLionProjects/system2.1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/erdin/CLionProjects/system2.0/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerSupport.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/CrayClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/OrangeC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TIClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.3.1.1/bin/cmake/win/x64/share/cmake-3.30/Modules/Platform/WindowsPaths.cmake C$:/Users/erdin/CLionProjects/system2.1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeRCCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
 
 
 #############################################

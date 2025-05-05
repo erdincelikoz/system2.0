@@ -7,6 +7,7 @@
     <option name="/Default/RiderDebugger/RiderRestoreDecompile/RestoreDecompileSetting/@EntryValue" value="false" type="bool" />
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
     <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
     <option name="/Default/Housekeeping/LiveTemplatesHousekeeping/HotspotSessionHintIsShown/@EntryValue" value="true" type="bool" />
   </component>
@@ -31,14 +32,34 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="-Added the Simulatie class that will end up outputting all required information regarding the simulation.&#10;-Added Car movement using mathematical formulas. -- Cars may not surpass eachother!&#10;-getParsedVoertuigen is now called by reference so that it can be used to modify the parsedVoertuigen in the simulation.&#10;-Added sortVoertuigen function to sort vectors of class Voertuig based on position (highest comes first).&#10;-Parsed vectors of class Voertuig are now automatically sorted to avoid conflict with the mathematical formulas">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" name="Changes" comment="-Added new attributes to classes for compatibility with the simulation.&#10;-Expanded the simulation and vehicle functionality&#10;-Vehicles now disappear when their position is further than the road length.&#10;-Added a few more tests to gtest.">
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-0e0dc5a1ff8bea6016ba.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-6cb5121dc4ebc9ffc511.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/a.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Baan.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Baan.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Baan.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Baan.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bushalte.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bushalte.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bushalte.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bushalte.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kruispunt.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kruispunt.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kruispunt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kruispunt.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulatie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulatie.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Simulatie.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulatie.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Verkeerslicht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verkeerslicht.cpp" afterDir="false" />
@@ -47,16 +68,19 @@
       <change beforePath="$PROJECT_DIR$/src/Voertuig.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VoertuigRijden.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoertuigRijden.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/VoertuigRijden.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoertuigRijden.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Voertuiggenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Voertuiggenerator.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/XmlParser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/VoertuigTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/VoertuigTests.cpp" afterDir="false" />
     </list>
-    <list id="e807f85e-fb39-4c51-9b60-f75096ceca89" name="Changes by rajle" comment="Alleen Raj - Alle testen aangemaakt en gecorrigeerd">
-      <change beforePath="$PROJECT_DIR$/src/Simulatie.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulatie.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Verkeerslicht.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verkeerslicht.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/XmlParser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/XmlParser.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/XmlParserTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/XmlParserTests.cpp" afterDir="false" />
+    <list id="3bff84b0-00a4-4384-8431-053b168bec67" name="Changes by Erdin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Simulatie.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Simulatie.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VoertuigRijden.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/VoertuigRijden.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/input.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/input.xml" afterDir="false" />
     </list>
+    <list id="e807f85e-fb39-4c51-9b60-f75096ceca89" name="Changes by rajle" comment="Alleen Raj - Alle testen aangemaakt en gecorrigeerd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,125 +102,43 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/erdincelikoz/system2.0.git&quot;,
-    &quot;accountId&quot;: &quot;034c5c5f-7e1a-4ba2-9f5b-03bda2c7efa2&quot;
+    &quot;accountId&quot;: &quot;72bc71ad-9393-493d-bb39-0df1233362f5&quot;
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Baan.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Simulatie.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/Voertuig.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/erdin/CLionProjects/system2.0/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/VoertuigRijden.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/Simulatie.h">
+    <file path="$PROJECT_DIR$/src/input.xml">
       <ranges>
-        <range start1="5" end1="6" start2="5" end2="6" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
-        <range start1="11" end1="12" start2="11" end2="13" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="10" end1="11" start2="10" end2="11" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="16" end1="18" start2="16" end2="18" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="22" end1="23" start2="22" end2="23" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="28" end1="29" start2="28" end2="29" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="39" end1="41" start2="39" end2="41" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="43" end1="43" start2="43" end2="50" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/XmlParser.cpp">
+    <file path="$PROJECT_DIR$/src/VoertuigRijden.h">
       <ranges>
-        <range start1="19" end1="20" start2="19" end2="20" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
-        <range start1="73" end1="75" start2="73" end2="74" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
-        <range start1="79" end1="81" start2="78" end2="79" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
-        <range start1="84" end1="86" start2="82" end2="83" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
-        <range start1="386" end1="386" start2="383" end2="386" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="14" end1="15" start2="14" end2="21" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="16" end1="16" start2="22" end2="26" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="18" end1="18" start2="28" end2="32" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="20" end1="20" start2="34" end2="38" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="22" end1="22" start2="40" end2="44" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="23" end1="23" start2="45" end2="51" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="24" end1="26" start2="52" end2="52" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
       </ranges>
     </file>
-    <file path="$PROJECT_DIR$/src/Verkeerslicht.cpp">
+    <file path="$PROJECT_DIR$/src/Simulatie.cpp">
       <ranges>
-        <range start1="3" end1="3" start2="3" end2="4" changelist="e807f85e-fb39-4c51-9b60-f75096ceca89" />
-        <range start1="5" end1="5" start2="6" end2="14" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="7" end1="7" start2="7" end2="12" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="9" end1="10" start2="14" end2="15" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="11" end1="11" start2="16" end2="17" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="13" end1="13" start2="19" end2="24" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="19" end1="19" start2="30" end2="33" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
+        <range start1="27" end1="27" start2="41" end2="42" changelist="3bff84b0-00a4-4384-8431-053b168bec67" />
+        <range start1="43" end1="47" start2="58" end2="61" changelist="bcae8ae1-b1c3-43ff-b185-c01a6df4b24b" />
       </ranges>
     </file>
   </component>
@@ -217,38 +159,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "CMake Application.system2_0.executor": "Run",
-    "Google Test.XmlParserTest.MissingBaanNaamOfLengte.executor": "Run",
-    "Google Test.verkeers_tests.executor": "Run",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "ctest.advertisement.all.test.configuration.is.created": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/erdin/CLionProjects/system1_0",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "C:/Users/erdin/CLionProjects/system2.0/main.cpp",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;CMake Application.system2_0.executor&quot;: &quot;Run&quot;,
+    &quot;CTest Application.VerkeersTests.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.XmlParserTest.MissingBaanNaamOfLengte.executor&quot;: &quot;Run&quot;,
+    &quot;Google Test.verkeers_tests.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;ctest.advertisement.all.test.configuration.is.created&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/rajle/CLionProjects/system2.0/system2.0&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/erdin/CLionProjects/system2.0/main.cpp&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\erdin\CLionProjects\system2.0" />
       <recent name="C:\Users\erdin\CLionProjects\system2.0\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\erdin\CLionProjects\system2.0" />
       <recent name="C:\Users\erdin\CLionProjects\system2.0\src" />
     </key>
   </component>
@@ -275,7 +220,13 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="SUITE_TEST">
+    <configuration name="All CTest" type="CTestRunConfiguration" factoryName="CTestRun" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="PATTERN">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VerkeersTests" type="CTestRunConfiguration" factoryName="CTestRun" temporary="true" PROGRAM_PARAMS="--extra-verbose" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" WORKING_DIR="file://$CMakeCurrentLocalGenerationDir$" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_PATH="$CTestCurrentExecutableName$" EXPLICIT_BUILD_TARGET_NAME="all" TEST_MODE="PATTERN">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -284,11 +235,13 @@
     <list>
       <item itemvalue="CMake Application.system2_0" />
       <item itemvalue="CTest Application.All CTest" />
+      <item itemvalue="CTest Application.VerkeersTests" />
       <item itemvalue="Google Test.verkeers_tests" />
       <item itemvalue="Google Test.XmlParserTest.MissingBaanNaamOfLengte" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="CTest Application.VerkeersTests" />
         <item itemvalue="Google Test.XmlParserTest.MissingBaanNaamOfLengte" />
       </list>
     </recent_temporary>
@@ -304,7 +257,11 @@
       <workItem from="1746129121513" duration="8688000" />
       <workItem from="1746191914103" duration="29412000" />
       <workItem from="1746269916618" duration="48757000" />
-      <workItem from="1746362506796" duration="15188000" />
+      <workItem from="1746362506796" duration="22372000" />
+      <workItem from="1746389888464" duration="17756000" />
+      <workItem from="1746414581868" duration="8257000" />
+      <workItem from="1746426429318" duration="6833000" />
+      <workItem from="1746470468421" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Added functional constructor to Verkeerslicht.cpp">
       <option name="closed" value="true" />
@@ -394,7 +351,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746327968915</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="-Added new attributes to classes for compatibility with the simulation.&#10;-Expanded the simulation and vehicle functionality&#10;-Vehicles now disappear when their position is further than the road length.&#10;-Added a few more tests to gtest.">
+      <option name="closed" value="true" />
+      <created>1746378762139</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746378762139</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,6 +381,7 @@
     <MESSAGE value="Aanpassingen van Raj aan de parser" />
     <MESSAGE value="-Added the Simulatie class that will end up outputting all required information regarding the simulation.&#10;-Added Car movement using mathematical formulas. -- Cars may not surpass eachother!&#10;-getParsedVoertuigen is now called by reference so that it can be used to modify the parsedVoertuigen in the simulation.&#10;-Added sortVoertuigen function to sort vectors of class Voertuig based on position (highest comes first).&#10;-Parsed vectors of class Voertuig are now automatically sorted to avoid conflict with the mathematical formulas" />
     <MESSAGE value="Alleen Raj - Alle testen aangemaakt en gecorrigeerd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alleen Raj - Alle testen aangemaakt en gecorrigeerd" />
+    <MESSAGE value="-Added new attributes to classes for compatibility with the simulation.&#10;-Expanded the simulation and vehicle functionality&#10;-Vehicles now disappear when their position is further than the road length.&#10;-Added a few more tests to gtest." />
+    <option name="LAST_COMMIT_MESSAGE" value="-Added new attributes to classes for compatibility with the simulation.&#10;-Expanded the simulation and vehicle functionality&#10;-Vehicles now disappear when their position is further than the road length.&#10;-Added a few more tests to gtest." />
   </component>
 </project>

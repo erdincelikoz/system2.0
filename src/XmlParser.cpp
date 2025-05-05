@@ -8,53 +8,114 @@
 #include "Voertuiggenerator.h"
 using namespace std;
 
+/**
+ * Constructor voor de XmlParser.
+ * @param inputnaam De bestandsnaam van het XML-bestand dat moet worden geparsed
+ */
 XmlParser::XmlParser(string inputnaam) {
     bestandsnaam = inputnaam;
 }
+
+/**
+ * Stelt de vector met geparste banen in.
+ * @param tempBanen De vector met banen om in te stellen
+ */
 void XmlParser::setParsedBanen(vector<Baan> tempBanen) {
     parsedBanen = tempBanen;
 }
+
+/**
+ * Stelt de vector met geparste voertuigen in.
+ * @param tempVoertuigen De vector met voertuigen om in te stellen
+ */
 void XmlParser::setParsedVoertuigen(vector<Voertuig> tempVoertuigen) {
     parsedVoertuigen = tempVoertuigen;
 }
+
+/**
+ * Geeft de geparste verkeerslichten terug.
+ * @return Refereert naar vector met verkeerslichten uit het XML-bestand
+ */
 vector<Verkeerslicht>& XmlParser::getParsedVerkeerslichten() {
     return parsedVerkeerslichten;
 }
+
+/**
+ * Stelt de vector met geparste verkeerslichten in.
+ * @param parsed_verkeerslicht De vector met verkeerslichten om in te stellen
+ */
 void XmlParser::setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_verkeerslicht) {
     parsedVerkeerslichten = parsed_verkeerslicht;
 }
+
+/**
+ * Geeft de geparste banen terug.
+ * @return Vector met banen uit het XML-bestand
+ */
 vector<Baan> XmlParser::getParsedBanen() {
     return parsedBanen;
 }
 
+/**
+ * Geeft de geparste voertuigen terug.
+ * @return Referentie naar vector met voertuigen uit het XML-bestand
+ */
 vector<Voertuig> &XmlParser::getParsedVoertuigen() {
     return parsedVoertuigen;
 }
 
+/**
+ * Geeft de geparste bushaltes terug.
+ * @return Vector met bushaltes uit het XML-bestand
+ */
 vector<Bushalte> XmlParser::getParsedBushaltes() const {
     return parsedBushaltes;
 }
 
+/**
+ * Stelt de vector met geparste bushaltes in.
+ * @param parsed_bushaltes De vector met bushaltes om in te stellen
+ */
 void XmlParser::setParsedBushaltes(const vector<Bushalte> &parsed_bushaltes) {
     parsedBushaltes = parsed_bushaltes;
 }
 
+/**
+ * Geeft de geparste kruispunten terug.
+ * @return Vector met kruispunten uit het XML-bestand
+ */
 vector<Kruispunt> XmlParser::getParsedKruispunten() const {
     return parsedKruispunten;
 }
 
+/**
+ * Stelt de vector met geparste kruispunten in.
+ * @param parsed_kruispunten De vector met kruispunten om in te stellen
+ */
 void XmlParser::setParsedKruispunten(const vector<Kruispunt> &parsed_kruispunten) {
     parsedKruispunten = parsed_kruispunten;
 }
 
+/**
+ * Geeft de geparste voertuiggeneratoren terug.
+ * @return Vector met voertuiggeneratoren uit het XML-bestand
+ */
 vector<Voertuiggenerator> XmlParser::getParsedVoertuiggeneratoren() const {
     return parsedVoertuiggenerator;
 }
 
+/**
+ * Stelt de vector met geparste voertuiggeneratoren in.
+ * @param parsed_voertuiggenerator De vector met voertuiggeneratoren om in te stellen
+ */
 void XmlParser::setParsedVoertuiggeneratoren(const vector<Voertuiggenerator> &parsed_voertuiggenerator) {
     parsedVoertuiggenerator = parsed_voertuiggenerator;
 }
-
+/**
+ * Zoekt een baan op basis van de naam.
+ * @param baannaam De naam van de baan die moet worden gezocht
+ * @return Pointer naar de baan als deze bestaat, anders nullptr
+ */
 Baan* XmlParser::getRelevanteBaan(const string& baannaam) {
     for (unsigned int i=0; i < getParsedBanen().size(); i++) {
         if (getParsedBanen()[i].getNaamBaan() == baannaam) {
@@ -64,10 +125,12 @@ Baan* XmlParser::getRelevanteBaan(const string& baannaam) {
     return nullptr;
 }
 
+/**
+ * Parst het XML-bestand en laadt de elementen in de juiste vectoren.
+ * @throw invalid_argument Als het bestand niet kan worden geladen of als er ongeldige elementen zijn
+ */
 void XmlParser::parse() {
     TiXmlDocument doc(bestandsnaam.c_str());
-
-
 
     //Checks voor geldigheid voordat we parsen
     if (!doc.LoadFile()) {
@@ -83,14 +146,13 @@ void XmlParser::parse() {
         throw invalid_argument("No  element found");
     }
 
-
-
     vector<Baan> tempBanen;
     vector<Voertuig> tempVoertuigen;
     vector<Verkeerslicht> tempVerkeerslichten;
     vector<Voertuiggenerator> tempVoertuiggeneratoren;
     vector<Bushalte> tempBushaltes;
     vector<Kruispunt> tempKruispunten;
+
     for (TiXmlElement* element = root-> FirstChildElement(); element != NULL; element = element->NextSiblingElement()) {
         string elementType = element-> Value();
 
@@ -115,7 +177,7 @@ void XmlParser::parse() {
             string naam = naamElement->GetText();
             string lengteStr = lengteElement->GetText();
 
-            // Check voor  lengte string
+            // Check voor lengte string
             if (lengteStr.empty()) {
                 throw invalid_argument("Baan lengte is leeg");
             }
@@ -317,7 +379,6 @@ void XmlParser::parse() {
             TiXmlElement* baanElement2 = baanElement1->NextSiblingElement("baan");
 
 
-
             if (baanElement1 == nullptr) {
                 throw invalid_argument("KRUISPUNT ontbreekt eerste baan");
             }
@@ -358,7 +419,6 @@ void XmlParser::parse() {
     }
 
 
-
     //Parsed Baan
     setParsedBanen(tempBanen);
 
@@ -375,12 +435,12 @@ void XmlParser::parse() {
                 temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             throw invalid_argument("Positie van voertuig is ongeldig");
-                }
+        }
         if (temp->getLengte()==-1 || temp->getMaxVersnelling()==-1 || temp->getMaxSnelheid()==-1 ||
                 temp->getMaxRemFactor()==-1 || temp->getMinVolgAfstand()==-1) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             throw invalid_argument("Voertuig heeft ongeldige type");
-                }
+        }
         Baan* tempBaan = getRelevanteBaan(temp->getNaamBaan());
         int tempBaanLengte = tempBaan->getLengteBaan();
         temp->setHuidigeBaanLengte(tempBaanLengte);
@@ -402,7 +462,7 @@ void XmlParser::parse() {
             throw invalid_argument("Positie van verkeerslicht is ongeldig");
         }
     }
-    setParsedVerkeerslichten(tempVerkeerslichten);
+    setParsedVerkeerslichten(Verkeerslicht::sortVerkeerslichten((tempVerkeerslichten)));
 
 
 
