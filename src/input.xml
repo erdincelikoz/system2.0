@@ -8,14 +8,14 @@
 
     <VOERTUIG>
         <baan>Middelheimlaan</baan>
-        <positie>100</positie>
+        <positie>200</positie>
         <type>bus</type>
     </VOERTUIG>
 
     <VOERTUIG>
         <baan>Middelheimlaan</baan>
-        <positie>40</positie>
-        <type>brandweerwagen</type>
+        <positie>100</positie>
+        <type>auto</type>
     </VOERTUIG>
 
     <VOERTUIG>
@@ -26,7 +26,7 @@
 
     <VOERTUIG>
         <baan>Middelheimlaan</baan>
-        <positie>80</positie>
+        <positie>73</positie>
         <type>politiecombi</type>
     </VOERTUIG>
 
@@ -37,9 +37,16 @@
 
     <VERKEERSLICHT>
         <baan>Middelheimlaan</baan>
-        <positie>0</positie>
-        <cyclus>20</cyclus>
+        <positie>115</positie>
+        <cyclus>500</cyclus>
     </VERKEERSLICHT>
+
+    <VERKEERSLICHT>
+        <baan>Middelheimlaan</baan>
+        <positie>215</positie>
+        <cyclus>500</cyclus>
+    </VERKEERSLICHT>
+
 
     <BUSHALTE>
         <baan>Middelheimlaan</baan>

@@ -43,6 +43,12 @@ public:
      * @param voertuigen De vector met de voertuigen waarvoor de gewenste maximale snelheid ingesteld moet worden
      */
     static void defineGewensteMaxSnelheid(vector<Voertuig>& voertuigen);
+
+    /**
+     * Deze functie stelt de gestopte status in voor alle voertuigen.
+     * @param voertuigen De vector met alle voertuigen waarvoor de gestopte status ingesteld moet worden
+     */
+    static void defineStopped(vector<Voertuig>& voertuigen);
 };
 
 #endif //VOERTUIGRIJDEN_H

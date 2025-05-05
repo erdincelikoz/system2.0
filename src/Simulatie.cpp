@@ -14,6 +14,7 @@ void switchKleur(vector<Verkeerslicht>& verkeerslichten, int tijd) {
     for (Verkeerslicht& verkeerslicht : verkeerslichten)
         if (tijd%verkeerslicht.getCyclus()==0) {            //als tijd een veelvoud is van cyclustijd, wissel van kleur
             verkeerslicht.setKleur(verkeerslicht.getKleur()==true ? false : true);
+            cout << "Verkeerslicht met cyclus " << verkeerslicht.getCyclus() << " verandert naar " << verkeerslicht.getKleur();
         }
 }
 
@@ -38,6 +39,7 @@ void runSimulation() {
     while (true) {
         if (tijd==0) {
             VoertuigRijden::defineGewensteMaxSnelheid(parser.getParsedVoertuigen());
+            VoertuigRijden::defineStopped(parser.getParsedVoertuigen());
             defineKleur(parser.getParsedVerkeerslichten());
         }
         string sTijd = to_string(tijd);
