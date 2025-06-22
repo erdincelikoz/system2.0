@@ -180,6 +180,22 @@ vector<Voertuig> Voertuig::sortVoertuigen(vector<Voertuig> voertuigen) {
     return voertuigen;
 }
 
+void Voertuig::setLengte(int l) {
+    lengte = l;
+}
+void Voertuig::setMaxSnelheid(double s) {
+    maxSnelheid = s;
+}
+void Voertuig::setMaxVersnelling(double a) {
+    maxVersnelling = a;
+}
+void Voertuig::setMaxRemFactor(double r) {
+    maxRemFactor = r;
+}
+void Voertuig::setMinVolgAfstand(int afstand) {
+    minVolgAfstand = afstand;
+}
+
 /**
  * @brief Constructor voor een nieuw voertuig.
  * @param baan De naam van de baan waarop het voertuig zich bevindt.

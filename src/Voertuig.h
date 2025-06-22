@@ -175,6 +175,14 @@ public:
      */
     static vector<Voertuig> sortVoertuigen(vector<Voertuig> Voertuigen);
 
+    void setLengte(int lengte);
 
+    void setMaxSnelheid(double s);
+
+    void setMaxVersnelling(double a);
+
+    void setMaxRemFactor(double r);
+
+    void setMinVolgAfstand(int afstand);
 };
 #endif // VOERTUIG_H
