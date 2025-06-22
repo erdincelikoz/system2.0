@@ -29,6 +29,18 @@ add_executable(system2_0
         src/VoertuigRijden.h
         src/Simulatie.cpp
         src/Simulatie.h
+        src/LoggerOutput.cpp
+        src/LoggerOutput.h
+        src/Bus.cpp
+        src/Bus.h
+        src/Auto.cpp
+        src/Auto.h
+        src/Brandweerwagen.cpp
+        src/Brandweerwagen.h
+        src/Ziekenwagen.cpp
+        src/Ziekenwagen.h
+        src/Politiewagen.cpp
+        src/Politiewagen.h
 
 )
 
@@ -53,6 +65,18 @@ add_executable(verkeers_tests
         src/VoertuigRijden.h
         src/Simulatie.cpp
         src/Simulatie.h
+        src/LoggerOutput.cpp
+        src/LoggerOutput.h
+        src/Bus.cpp
+        src/Bus.h
+        src/Auto.cpp
+        src/Auto.h
+        src/Brandweerwagen.cpp
+        src/Brandweerwagen.h
+        src/Ziekenwagen.cpp
+        src/Ziekenwagen.h
+        src/Politiewagen.cpp
+        src/Politiewagen.h
 )
 
 # ---------- Link testprogramma met GTest ----------

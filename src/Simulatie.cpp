@@ -5,18 +5,31 @@
 using namespace std::this_thread;
 using namespace std::chrono;
 
+/**
+ * @brief Schakelt verkeerslichten van kleur op basis van hun cyclustijd.
+ * @param verkeerslichten Vector met verkeerslichten die mogelijk van kleur moeten veranderen.
+ * @param tijd De huidige simulatietijd.
+ */
 void switchKleur(vector<Verkeerslicht>& verkeerslichten, int tijd) {
     for (Verkeerslicht& verkeerslicht : verkeerslichten)
-        if (tijd%verkeerslicht.getCyclus()==0) {
+        if (tijd%verkeerslicht.getCyclus()==0) {            //als tijd een veelvoud is van cyclustijd, wissel van kleur
             verkeerslicht.setKleur(verkeerslicht.getKleur()==true ? false : true);
         }
 }
+
+/**
+ * @brief Initialiseert alle verkeerslichten met de groene kleur
+ * @param verkeerslichten Vector met verkeerslichten die geïnitialiseerd moeten worden
+ */
 void defineKleur(vector<Verkeerslicht>& verkeerslichten) {
     for (Verkeerslicht& verkeerslicht : verkeerslichten) {
         verkeerslicht.setKleur(true);
     }
 }
 
+/**
+ * @brief Voert de verkeerssimulatie uit.
+ */
 void runSimulation() {
     XmlParser parser("src/input.xml");
     parser.parse();
@@ -41,10 +54,9 @@ void runSimulation() {
             cout << "-> positie: " << sPositie << endl;
             string sSnelheid = to_string(parser.getParsedVoertuigen()[i].getSnelheid());
             cout << "-> snelheid: " << sSnelheid << endl;
-        }
-
-        temp.updateVoertuigen(parser.getParsedVoertuigen(), tijd);
-        sleep_for(microseconds(166));
+    }
+        temp.updateVoertuigen(parser.getParsedVoertuigen(), parser.getParsedVerkeerslichten(), tijd);
+        sleep_for(microseconds(16600));
         tijd++;
     }
 }
