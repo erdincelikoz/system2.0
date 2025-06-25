@@ -27,20 +27,17 @@ public:
     string getNaamBaan();
 
     /**
-    * Retourneert lengte van de baan
-    * @return De lengte van de baan als double
+    *ENSURE(lengte >= 0, "baan length must not be less than zero")
     */
     double getLengteBaan();
 
     /**
-     * Setter voor nieuwe naam van de baan
-     * @param nieuw De nieuwe naam van de baan
+     *REQUIRE(nieuw != "", "baan name must not be set to empty")
      */
     void setNaamBaan(string nieuw);
 
     /**
-    * Setter voor nieuwe lengte van de baan
-    * @param nieuw De nieuwe lengte van de baan
+     *REQUIRE(nieuw >= 0, "baan length must not be set to less than zero")
     */
     void setLengteBaan(double nieuw);
 

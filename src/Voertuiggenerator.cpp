@@ -1,64 +1,42 @@
 #include "Voertuiggenerator.h"
-#include <string>
+#include "DesignByContract.h"
 
-using namespace std;
-
-/**
-* @brief Constructor voor een nieuwe voertuiggenerator.
-* @param baan De naam van de baan waarop voertuigen worden gegenereerd.
-* @param frequentie De frequentie waarmee nieuwe voertuigen worden gegenereerd.
-* @param type Het type van het gegenereerde voertuig
-*/
 Voertuiggenerator::Voertuiggenerator(const string &baan, int frequentie, const string &type) {
+    _initCheck = this;
     setBaanNaam(baan);
     setFrequentie(frequentie);
     setType(type);
+    ENSURE(properlyInit(),"constructor must end in properlyInit state");
 }
 
-/**
- * @brief Geeft het type voertuig terug dat door deze generator wordt gemaakt.
- * @return Het type voertuig als string.
- */
+bool Voertuiggenerator::properlyInit() {
+    return _initCheck == this;
+}
+
 string Voertuiggenerator::getType() const {
     return type;
 }
 
-/**
- * @brief Stelt het type voertuig in dat door deze generator wordt gemaakt.
- * @param type Het nieuwe type voertuig als string.
- */
 void Voertuiggenerator::setType(const string &type) {
     this->type = type;
 }
 
-/**
- * @brief Geeft de naam van de baan terug waarop voertuigen worden gegenereerd.
- * @return De naam van de baan als string.
- */
 string Voertuiggenerator::getNaamBaan() const {
+    ENSURE(baanNaam != "", "baan name must not be empty");
     return baanNaam;
 }
 
-/**
- * @brief Geeft de frequentie terug waarmee voertuigen worden gegenereerd.
- * @return De frequentie als integer.
- */
-int Voertuiggenerator::getFrequentie() const {
-    return frequentie;
-}
-
-/**
- * @brief Stelt de naam van de baan in waarop voertuigen worden gegenereerd.
- * @param nieuwBaan De nieuwe naam van de baan als string.
- */
 void Voertuiggenerator::setBaanNaam(string nieuwBaan) {
+    REQUIRE(nieuwBaan != "", "baan name must not be set to empty");
     baanNaam = nieuwBaan;
 }
 
-/**
- * @brief Stelt de frequentie in waarmee voertuigen worden gegenereerd.
- * @param nieuwFrequentie De nieuwe frequentie als int
- */
+int Voertuiggenerator::getFrequentie() const {
+    ENSURE(frequentie >= 0, "Frequentie must not be less than zero");
+    return frequentie;
+}
+
 void Voertuiggenerator::setFrequentie(int nieuwFrequentie) {
+    REQUIRE(nieuwFrequentie >= 0, "Frequentie must not be set less than zero");
     frequentie = nieuwFrequentie;
 }

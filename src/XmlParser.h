@@ -15,6 +15,7 @@ using namespace std;
  */
 class XmlParser {
 private:
+    XmlParser* _initCheck;
     string bestandsnaam;
     vector<Baan> parsedBanen;
     vector<Voertuig> parsedVoertuigen;
@@ -24,6 +25,8 @@ private:
     vector<Kruispunt> parsedKruispunten;
 
 public:
+
+    bool properlyInit();
     /**
     * Geeft de geparste bushaltes terug.
     * @return Vector met bushaltes uit het XML-bestand

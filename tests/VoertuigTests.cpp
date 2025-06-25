@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "VoertuigRijden.h"
+#include "Voertuig.h"
 #include "XmlParser.h"
 TEST(VoertuigTest, MinimaleVolgAfstand) {
     XmlParser parser ("src/input.xml");

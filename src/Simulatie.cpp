@@ -1,4 +1,13 @@
+/**
+ * @file Simulatie.cpp
+ * @brief Uitvoeren van de verkeerssimulatie en verkeerslichtlogica.
+ * @author Raj Shah en Erdin Celikoz
+ * @date 23 juni 2025
+ * @version 1.0
+ */
+
 #include "Simulatie.h"
+#include "LoggerOutput.h"
 #include <chrono>
 #include <thread>
 #include <cmath>
@@ -11,16 +20,21 @@ using namespace std::chrono;
  * @param tijd De huidige simulatietijd.
  */
 void switchKleur(vector<Verkeerslicht>& verkeerslichten, int tijd) {
-    for (Verkeerslicht& verkeerslicht : verkeerslichten)
-        if (tijd%verkeerslicht.getCyclus()==0) {            //als tijd een veelvoud is van cyclustijd, wissel van kleur
-            verkeerslicht.setKleur(verkeerslicht.getKleur()==true ? false : true);
-            cout << "Verkeerslicht met cyclus " << verkeerslicht.getCyclus() << " verandert naar " << verkeerslicht.getKleur();
+    REQUIRE(tijd >= 0, "time must not be negative");
+    for (Verkeerslicht& verkeerslicht : verkeerslichten) {
+        Verkeerslicht temp = verkeerslicht;
+        if (tijd % verkeerslicht.getCyclus() == 0) {
+            verkeerslicht.setKleur(verkeerslicht.getKleur() ? false : true);
+            LoggerOutput::log("Verkeerslicht met cyclus " + to_string(verkeerslicht.getCyclus()) + " verandert naar "
+                              + (verkeerslicht.getKleur() ? "groen" : "rood"), LoggerOutput::DEBUG);
+            ENSURE(verkeerslicht.getKleur() != temp.getKleur(), "verkeerslicht color change failed");
         }
+    }
 }
 
 /**
- * @brief Initialiseert alle verkeerslichten met de groene kleur
- * @param verkeerslichten Vector met verkeerslichten die geïnitialiseerd moeten worden
+ * @brief Initialiseert alle verkeerslichten met de groene kleur.
+ * @param verkeerslichten Vector met verkeerslichten die geïnitialiseerd moeten worden.
  */
 void defineKleur(vector<Verkeerslicht>& verkeerslichten) {
     for (Verkeerslicht& verkeerslicht : verkeerslichten) {
@@ -30,36 +44,30 @@ void defineKleur(vector<Verkeerslicht>& verkeerslichten) {
 
 /**
  * @brief Voert de verkeerssimulatie uit.
+ * @details Leest invoerdata via XmlParser, initialiseert instellingen en voert de simulatie in tijdstappen uit.
  */
 void runSimulation() {
     XmlParser parser("src/input.xml");
     parser.parse();
     int tijd = 0;
-    VoertuigRijden temp;
     while (true) {
-        if (tijd==0) {
-            VoertuigRijden::defineGewensteMaxSnelheid(parser.getParsedVoertuigen());
-            VoertuigRijden::defineStopped(parser.getParsedVoertuigen());
+        if (tijd == 0) {
+            Voertuig::defineGewensteMaxSnelheid(parser.getParsedVoertuigen());
+            Voertuig::defineStopped(parser.getParsedVoertuigen());
             defineKleur(parser.getParsedVerkeerslichten());
         }
-        string sTijd = to_string(tijd);
-        cout << "Tijd: " << sTijd << endl;
 
+        LoggerOutput::log("Tijd: " + to_string(tijd));
         switchKleur(parser.getParsedVerkeerslichten(), tijd);
+        Voertuig::updateVoertuigen(parser.getParsedVoertuigen(), parser.getParsedVerkeerslichten(), tijd);
 
-        for (unsigned int i=0; i < parser.getParsedVoertuigen().size(); i++) {
-            string si = to_string(i+1);
-            cout << "Voertuig " << si << endl;
-            cout << "-> baan: " << parser.getParsedVoertuigen()[i].getNaamBaan() << endl;
-            int iPositie = int(round(parser.getParsedVoertuigen()[i].getPositie()));
-            string sPositie = to_string(iPositie);
-            cout << "-> positie: " << sPositie << endl;
-            string sSnelheid = to_string(parser.getParsedVoertuigen()[i].getSnelheid());
-            cout << "-> snelheid: " << sSnelheid << endl;
-    }
-        temp.updateVoertuigen(parser.getParsedVoertuigen(), parser.getParsedVerkeerslichten(), tijd);
+        for (unsigned int i = 0; i < parser.getParsedVoertuigen().size(); i++) {
+            LoggerOutput::log("Voertuig " + to_string(i + 1));
+            LoggerOutput::log("-> baan: " + parser.getParsedVoertuigen()[i].getNaamBaan());
+            LoggerOutput::log("-> positie: " + to_string(int(round(parser.getParsedVoertuigen()[i].getPositie()))));
+            LoggerOutput::log("-> snelheid: " + to_string(parser.getParsedVoertuigen()[i].getSnelheid()));
+        }
         sleep_for(microseconds(16600));
         tijd++;
     }
 }
-

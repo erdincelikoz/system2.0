@@ -1,27 +1,35 @@
+/**
+* @file Simulatie.h
+ * @brief Bevat declaraties voor de hoofdverkeerssimulatie en ondersteunende functies voor verkeerslichtenbeheer.
+ * @author Raj Shah and Erdin Celikoz
+ * @date 23 juni 2025
+ * @version 1.0
+ */
+
 #ifndef SIMULATIE_H
 #define SIMULATIE_H
+
 #include "XmlParser.h"
 #include <iostream>
-#include "VoertuigRijden.h"
+#include "Voertuig.h"
 #include "Verkeerslicht.h"
 
 /**
  * @brief Klasse die de simulatie van verkeer representeert.
  */
 class Simulatie {
-    const double simulatietijd = 0.0167; //ong 60 fps
+private:
+    const double simulatietijd = 0.0167;
 };
 
 /**
- * @brief Schakelt verkeerslichten van kleur op basis van hun cyclustijd.
- * @param verkeerslichten Vector met verkeerslichten die van kleur moeten veranderen.
- * @param tijd De huidige simulatietijd.
+ * REQUIRE(tijd >= 0, "time must not be negative")
+ * ENSURE(verkeerslicht.getKleur() != temp.getKleur(), "verkeerslicht color change failed")
  */
 void switchKleur(vector<Verkeerslicht>& verkeerslichten, int tijd);
 
 /**
- * @brief Initialiseert alle verkeerslichten met de groene kleur
- * @param verkeerslichten Vector met verkeerslichten die geïnitialiseerd moeten worden
+ * ENSURE(verkeerslicht.getKleur()== true, "verkeerslicht color undefined")
  */
 void defineKleur(vector<Verkeerslicht>& verkeerslichten);
 
@@ -29,6 +37,5 @@ void defineKleur(vector<Verkeerslicht>& verkeerslichten);
  * @brief Voert de verkeerssimulatie uit.
  */
 void runSimulation();
-
 
 #endif //SIMULATIE_H

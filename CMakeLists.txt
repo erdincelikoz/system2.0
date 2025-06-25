@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.30)
 project(system2_0)
 
+set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_FLAGS "-Wall -Werror -O2")
+set(CMAKE_EXE_LINKER_FLAGS -pthread)
 enable_testing()
 
 # Inclusie van je eigen source directory
@@ -25,8 +27,6 @@ add_executable(system2_0
         src/Bushalte.h
         src/Kruispunt.cpp
         src/Kruispunt.h
-        src/VoertuigRijden.cpp
-        src/VoertuigRijden.h
         src/Simulatie.cpp
         src/Simulatie.h
         src/LoggerOutput.cpp
@@ -39,8 +39,9 @@ add_executable(system2_0
         src/Brandweerwagen.h
         src/Ziekenwagen.cpp
         src/Ziekenwagen.h
-        src/Politiewagen.cpp
-        src/Politiewagen.h
+        src/Politiecombi.cpp
+        src/Politiecombi.h
+        src/DesignByContract.h
 
 )
 
@@ -61,8 +62,6 @@ add_executable(verkeers_tests
         src/Bushalte.h
         src/Kruispunt.cpp
         src/Kruispunt.h
-        src/VoertuigRijden.cpp
-        src/VoertuigRijden.h
         src/Simulatie.cpp
         src/Simulatie.h
         src/LoggerOutput.cpp
@@ -75,8 +74,8 @@ add_executable(verkeers_tests
         src/Brandweerwagen.h
         src/Ziekenwagen.cpp
         src/Ziekenwagen.h
-        src/Politiewagen.cpp
-        src/Politiewagen.h
+        src/Politiecombi.cpp
+        src/Politiecombi.h
 )
 
 # ---------- Link testprogramma met GTest ----------

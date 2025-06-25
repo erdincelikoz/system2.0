@@ -22,6 +22,7 @@ MAIN_SRCS = $(SRC_DIR)/main.cpp \
             $(SRC_DIR)/tinyxmlerror.cpp \
             $(SRC_DIR)/Bushalte.cpp \
             $(SRC_DIR)/Kruispunt.cpp \
+            $(SRC_DIR)/LoggerOutput.cpp \
             $(SRC_DIR)/VoertuigRijden.cpp \
             $(SRC_DIR)/Simulatie.cpp
 

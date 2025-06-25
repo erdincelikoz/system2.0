@@ -1,89 +1,85 @@
 /**
  * @file Verkeerslicht.h
- * @brief Simpele verkeerslichtklasse nodig voor het innemen en verwerken van informatie in verband met de verkeerslicht(en).
- * @author Erdin Celikoz & Raj Shah
- * @date 1 mei 2025
- * @version 2.0
+ * @brief Klasse die een verkeerslicht voorstelt in de simulatie. Houdt o.a. cyclus, kleur, positie en baan bij.
+ * @author Raj Shah and Erdin Celikoz
+ * @date 23 juni 2025
+ * @version 2.1
  */
+
 #ifndef VERKEERSLICHT_H
 #define VERKEERSLICHT_H
+
 #include <vector>
 #include <string>
 using namespace std;
 
-/**
- * @brief Simpele verkeerslichtklasse nodig voor het innemen en verwerken van informatie in verband met de verkeerslicht(en).
- */
 class Verkeerslicht {
 private:
     string baan;
     double positie;
     int cyclus;
     bool kleur;
+    Verkeerslicht*_initCheck;
 
 public:
     /**
-    * @brief Geeft de huidige kleur van het verkeerslicht terug.
-    * @return Boolean waarde: true voor groen, false voor rood.
-    */
+     * @brief Constructor voor een verkeerslicht.
+     * @param baan De naam van de baan waarop het verkeerslicht zich bevindt.
+     * @param positie De positie op de baan.
+     * @param cyclus De tijdscyclus in seconden.
+     */
+    Verkeerslicht(string baan, double positie, int cyclus);
+
+    bool properlyInit();
+
+    /**
+     * @brief Haalt de huidige kleur van het verkeerslicht op.
+     * @return true voor groen, false voor rood.
+     */
     bool getKleur();
 
     /**
-    * @brief Stelt de kleur van het verkeerslicht in.
-    * @param kleur Boolean waarde: true voor groen, false voor rood.
-    */
+     * @brief Wijzigt de kleur van het verkeerslicht.
+     * @param kleur true voor groen, false voor rood.
+     */
     void setKleur(bool kleur);
 
     /**
-     * Retourneert naam van de baan waarop verkeerslicht is geplaatst
-     * @return Naam van de baan als string
+     * ENSURE(baan != "", "baan name must not be empty")
      */
     string getNaamBaan();
 
     /**
-     * Retourneert positie van verkeerslicht
-     * @return Positie van verkeerslicht
-     */
-    double getPositie();
-
-    /**
-     * Retourneert cyclus duur van verkeerslicht
-     * @return Cyclus duur (in seconden)
-     */
-    int getCyclus();
-
-    /**
-     * Setter voor nieuwe naam van de baan
-     * @param nieuw Nieuw baannaam
+     * REQUIRE(nieuw != "", "baan name must not be set to empty")
      */
     void setNaamBaan(string nieuw);
 
     /**
-    * Setter voor nieuwe positie van verkeerslicht
-    * @param nieuw Nieuwe positie van verkeerslicht
-    */
+     *ENSURE(positie >= 0, "Positie must not be less than zero")
+     */
+    double getPositie();
+
+    /**
+     *REQUIRE(nieuw >= 0, "Positie must not be set to less than zero")
+     */
     void setPositie(double nieuw);
 
     /**
-    * Setter voor nieuwe cyclusduur van verkeerslicht
-    * @param nieuw Nieuwe cyclusduur (in seconden)
-    */
+     *ENSURE(cyclus >= 0, "Cyclus must not be less than zero")
+     */
+    int getCyclus();
+
+    /**
+     *REQUIRE(nieuw >= 0, "Cyclus must not be set to less than zero")
+     */
     void setCyclus(int nieuw);
 
     /**
-    * @brief Sorteert een vector van verkeerslichten op basis van hun positie.
-    * @param verkeerslichten Vector met verkeerslichten die gesorteerd moet worden.
-    * @return Gesorteerde vector van verkeerslichten
-    */
-    static vector<Verkeerslicht> sortVerkeerslichten(vector<Verkeerslicht> verkeerslichten);
-
-    /**
-     * @brief Constructor voor een verkeerslicht.
-     * @param baan De baan waar het verkeerslicht zich op bevindt.
-     * @param positie De positie van het verkeerslicht op de baan.
-     * @param cyclus De tijdscyclus van het verkeerslicht.
+     * @brief Sorteert een lijst van verkeerslichten op basis van hun positie.
+     * @param verkeerslichten Vector van verkeerslichten.
+     * @return Gesorteerde vector op positie.
      */
-    Verkeerslicht(string baan, double positie, int cyclus);
+    static vector<Verkeerslicht> sortVerkeerslichten(vector<Verkeerslicht> verkeerslichten);
 };
 
 #endif // VERKEERSLICHT_H

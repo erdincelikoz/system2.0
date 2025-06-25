@@ -1,29 +1,33 @@
-#include "Kruispunt.h"
+//===========================//
+// Kruispunt.cpp
+//===========================//
 
 /**
- * @brief Geeft de vector met banen en hun posities terug
- * @return Pointer naar de vector met paren van baannamen en hun posities
+ * @file Kruispunt.cpp
+ * @brief Implementatie van Kruispunt klasse met Design by Contract.
+ * @author Raj Shah and Erdin Celikoz
+ * @date 2025-06-23
+ * @version 1.0
  */
-vector<pair<string, int>> *Kruispunt::getBanenEnPosities(){
+
+#include "Kruispunt.h"
+#include "DesignByContract.h"
+
+vector<pair<string, int>> *Kruispunt::getBanenEnPosities() {
+    for (unsigned int i = 0; i < banenEnPosities.size(); i++) {
+        ENSURE(banenEnPosities[i].first != "","kruispunt baan name may not be empty");
+        ENSURE(banenEnPosities[i].second >= 0, "kruispunt baan position may not be negative");
+    }
     return &banenEnPosities;
 }
 
-/**
- * @brief Stelt de vector met banen en hun posities in
- * @param banen_en_posities De nieuwe vector met paren van baannamen en hun posities
- */
 void Kruispunt::setBanenEnPosities(const vector<pair<string, int>> &banen_en_posities) {
     banenEnPosities = banen_en_posities;
 }
 
-/**
- * @brief Constructor voor een nieuw kruispunt tussen twee banen
- * @param a Eerste paar van baannaam en positie
- * @param b Tweede paar van baannaam en positie
- */
-
 Kruispunt::Kruispunt(pair<string, int> a, pair<string, int> b) {
-    getBanenEnPosities()->push_back(a);
-    getBanenEnPosities()->push_back(b);
+    _initCheck = this;
+    banenEnPosities.push_back(a);
+    banenEnPosities.push_back(b);
+    ENSURE(properlyInit(),"constructor must end in properlyInit state");
 }
-

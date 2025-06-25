@@ -1,178 +1,109 @@
+/**
+ * @file Voertuig.cpp
+ * @brief Implementatie van de klasse Voertuig.
+ *
+ * Bevat de logica voor voertuigdynamiek, interacties met verkeerslichten
+ * en gedrag gebaseerd op positie, snelheid en versnelling.
+ *
+ * @author Raj Shah
+ * @author Erdin Celikoz
+ * @date 23/06/2025
+ * @version 2.1
+ */
+
 #include "Voertuig.h"
 #include <string>
 #include <iostream>
+#include <cmath>
+#include <algorithm>
+#include "DesignByContract.h"
 using namespace std;
 
-/**
- * @brief Geeft de huidige snelheid van het voertuig terug.
- * @return De snelheid in meters per seconde.
- */
 double Voertuig::getSnelheid() {
     return snelheid;
 }
 
-/**
- * @brief Stelt de snelheid van het voertuig in.
- * @param snelheid De nieuwe snelheid in meters per seconde.
- */
 void Voertuig::setSnelheid(double snelheid) {
     this->snelheid = snelheid;
 }
 
-/**
- * @brief Geeft de versnelling van het voertuig terug.
- * @return De versnelling in meters per seconde kwadraat.
- */
 double Voertuig::getVersnelling() {
     return versnelling;
 }
 
-/**
- * @brief Stelt de versnelling van het voertuig in
- * @param versnelling De nieuwe versnelling
- */
 void Voertuig::setVersnelling(double versnelling) {
     this->versnelling = versnelling;
 }
 
-/**
- * @brief Geeft de maximale snelheid van het voertuig terug.
- * @return De maximale snelheid in meters per seconde.
- */
-double Voertuig::getMaxSnelheid() {
-    return maxSnelheid;
-}
-
-/**
- * @brief Geeft de gewenste maximale snelheid terug.
- * @return De gewenste maximale snelheid in meters per seconde.
- */
 double Voertuig::getGewensteMaxSnelheid() {
     return gewensteMaxSnelheid;
 }
 
-/**
-* @brief Geeft aan of het voertuig gestopt is
-* @return Boolean die aangeeft of het voertuig gestopt is
-*/
+void Voertuig::setGewensteMaxSnelheid(double gewenste_v_max) {
+    if (getType()=="auto") {
+        REQUIRE(gewensteMaxSnelheid==16.6||gewensteMaxSnelheid==16.6*0.4, "set gewensteMaxSnelheid does not match vehicle type");
+    }
+    if (getType()=="brandweerwagen") {
+        REQUIRE(gewensteMaxSnelheid==14.6||gewensteMaxSnelheid==14.6*0.4, "set gewensteMaxSnelheid does not match vehicle type");
+    }
+    if (getType()=="bus") {
+        REQUIRE(gewensteMaxSnelheid==11.4||gewensteMaxSnelheid==11.4*0.4, "set gewensteMaxSnelheid does not match vehicle type");
+    }
+    if (getType()=="ziekenwagen") {
+        REQUIRE(gewensteMaxSnelheid==15.5||gewensteMaxSnelheid==15.5*0.4, "set gewensteMaxSnelheid does not match vehicle type");
+    }
+    if (getType()=="politiecombi") {
+        REQUIRE(gewensteMaxSnelheid==17.2||gewensteMaxSnelheid==17.2*0.4, "set gewensteMaxSnelheid does not match vehicle type");
+    }
+    gewensteMaxSnelheid = gewenste_v_max;
+}
+
 bool Voertuig::getStopped() const {
     return stopped;
 }
 
-/**
- * @brief Stelt in of het voertuig gestopt is
- * @param stopped Boolean die aangeeft of het voertuig gestopt is
- */
 void Voertuig::setStopped(bool stopped) {
     this->stopped = stopped;
 }
-/**
- * @brief Geeft de lengte van de huidige baan terug.
- * @return De lengte van de huidige baan in meters.
- */
+
 int Voertuig::getHuidigeBaanLengte() const {
     return huidigeBaanLengte;
 }
 
-/**
- * @brief Stelt de lengte van de huidige baan in.
- * @param huidige_baan_lengte De lengte van de huidige baan in meters.
- */
 void Voertuig::setHuidigeBaanLengte(int huidige_baan_lengte) {
     huidigeBaanLengte = huidige_baan_lengte;
 }
 
-/**
- * @brief Stelt de gewenste maximale snelheid in.
- * @param gewenste_v_max De gewenste maximale snelheid in meters per seconde.
- */
-void Voertuig::setGewensteMaxSnelheid(double gewenste_v_max) {
-    gewensteMaxSnelheid = gewenste_v_max;
-}
 
-/**
- * @brief Geeft de maximale remfactor van het voertuig terug.
- * @return De maximale remfactor.
- */
-double Voertuig::getMaxRemFactor() {
-    return maxRemFactor;
-}
-
-/**
- * @brief Geeft de minimale volgafstand van het voertuig terug.
- * @return De minimale volgafstand in meters.
- */
-double Voertuig::getMinVolgAfstand() {
-    return minVolgAfstand;
-}
-
-/**
- * @brief Geeft de maximale versnelling van het voertuig terug.
- * @return De maximale versnelling in meters per seconde kwadraat.
- */
-double Voertuig::getMaxVersnelling() {
-    return maxVersnelling;
-}
-
-/**
- * @brief Geeft de naam van de baan terug waarop het voertuig zich bevindt.
- * @return De naam van de baan als string.
- */
 string Voertuig::getNaamBaan() {
+    ENSURE(baan != "", "baan name must not be empty");
     return baan;
 }
 
-/**
- * @brief Stelt de naam van de baan in waarop het voertuig zich bevindt.
- * @param nieuw De nieuwe naam van de baan.
- */
-void Voertuig::setNaamBaan(string nieuw) {
+void Voertuig::setNaamBaan(string &nieuw) {
+    REQUIRE(nieuw != "", "baan name must not be set to empty");
     baan = nieuw;
 }
 
-/**
- * @brief Geeft de positie van het voertuig op de baan terug.
- * @return De positie (in meters)
- */
 double Voertuig::getPositie() {
+    ENSURE(positie >= 0, "Positie must not be less than zero");
     return positie;
 }
 
-/**
- * @brief Stelt de positie van het voertuig op de baan in.
- * @param nieuw De nieuwe positie
- */
-void Voertuig::setPositie(double nieuw){
-    positie = nieuw;
+void Voertuig::setPositie(double nieuw) {
+    REQUIRE(nieuw >= 0, "Positie must not be set to less than zero");
+    this->positie = nieuw;
 }
 
-/**
- * @brief Geeft het type van het voertuig terug
- * @return Het type als string
- */
 string Voertuig::getType() {
     return type;
 }
-/**
- * @brief Stelt het type van het voertuig in.
- * @param t Het nieuw type als string.
- */
-void Voertuig::setType(string t) {
-    type  = t;
-}
-/**
- * @brief Geeft de lengte van het voertuig terug.
- * @return De lengte in meters.
- */
-int Voertuig::getLengte(){
-    return lengte;
+
+void Voertuig::setType(string type) {
+    REQUIRE(type!="", "voertuig type must not be set to empty");
+    this->type = type;
 }
 
-/**
- * @brief Sorteert een vector van voertuigen op basis van hun positie
- * @param voertuigen Vector met voertuigen die gesorteerd moet worden
- * @return Gesorteerde vector van voertuigen (aflopend op positie)
- */
 vector<Voertuig> Voertuig::sortVoertuigen(vector<Voertuig> voertuigen) {
     sort(voertuigen.begin(), voertuigen.end(), [](Voertuig a, Voertuig b) {
         return a.getPositie() > b.getPositie();
@@ -183,48 +114,197 @@ vector<Voertuig> Voertuig::sortVoertuigen(vector<Voertuig> voertuigen) {
 void Voertuig::setLengte(int l) {
     lengte = l;
 }
+
 void Voertuig::setMaxSnelheid(double s) {
     maxSnelheid = s;
 }
+
 void Voertuig::setMaxVersnelling(double a) {
     maxVersnelling = a;
 }
+
 void Voertuig::setMaxRemFactor(double r) {
+    REQUIRE(r>=4.29, "maxRemFactor must not be set to less than 4.29");
     maxRemFactor = r;
 }
+
 void Voertuig::setMinVolgAfstand(int afstand) {
+    REQUIRE(afstand >= 4, "minVolgAfstand must not be set less than 4");
     minVolgAfstand = afstand;
 }
 
-/**
- * @brief Constructor voor een nieuw voertuig.
- * @param baan De naam van de baan waarop het voertuig zich bevindt.
- * @param positie De beginpositie van het voertuig op de baan.
- * @param type Het type van het voertuig (auto, bus, brandweerwagen, ziekenwagen, politiecombi).
- */
-Voertuig::Voertuig(const string &baan, int positie, const string &type):
-/*
- *Voor alle duidelijkheid, constanten kunnen alleen gelijkgesteld worden aan iets bij 1. De moment dat ze gedefinieerd worden of 2. In de 'constructor initializer list'
- *In dit geval is het dus duidelijk 2. ? ... : ... is de 'ternary operator' die de if-conditie vervangt in de initializer omdat we hier geen normale if mogen gebruiken.
- *Werking van de ternary operator: (conditie) ? waarde_als_true : waarde_als_false;
- */
-lengte(type=="auto" ? 4 : type=="bus" ? 12 : type=="brandweerwagen" ? 10 :
-    type=="ziekenwagen" ? 8 : type=="politiecombi" ? 6 : -1),
 
-maxVersnelling(type=="auto" ? 1.44 : type=="bus" ? 1.22 : type=="brandweerwagen" ? 1.33 :
-    type=="ziekenwagen" ? 1.44 : type=="politiecombi" ? 1.55 : -1),
+int Voertuig::getLengte() const {
+    ENSURE(lengte>=4, "lengte must not be less than 4");
+    return lengte;
+}
 
-maxSnelheid(type=="auto" ? 16.6 : type=="bus" ? 11.4 : type=="brandweerwagen" ? 14.6 :
-    type=="ziekenwagen" ? 15.5 : type=="politiecombi" ? 17.2 : -1),
+double Voertuig::getMaxSnelheid() const {
+    ENSURE(maxSnelheid>=11.4, "maxSnelheid must not be set to less than 11.4");
+    return maxSnelheid;
+}
 
-maxRemFactor(type=="auto" ? 4.61 : type=="bus" ? 4.29 : type=="brandweerwagen" ? 4.56 :
-    type=="ziekenwagen" ? 4.47 : type=="politiecombi" ? 4.92 : -1),
+double Voertuig::getMaxVersnelling() const {
+    ENSURE(maxVersnelling>=1.22, "maxVersnelling must not be set to less than 1.22");
+    return maxVersnelling;
+}
 
-minVolgAfstand(type=="auto" ? 4 : type=="bus" ? 12 : type=="brandweerwagen" ? 10 :
-    type=="ziekenwagen" ? 8 : type=="politiecombi" ? 6 : -1) {
+double Voertuig::getMaxRemFactor() const {
+    ENSURE(maxRemFactor>=4.29, "maxRemFactor must not be set to less than 4.29");
+    return maxRemFactor;
+}
 
+int Voertuig::getMinVolgAfstand() const {
+    ENSURE(minVolgAfstand >= 4, "minVolgAfstand must not be set less than 4");
+    return minVolgAfstand;
+}
+
+Voertuig::Voertuig(string &baan, int positie, const string &type) {
+    _initCheck=this;
     setNaamBaan(baan);
     setPositie(positie);
     setType(type);
+    ENSURE(properlyInit(),"constructor must be properlyInit state");
 }
 
+void Voertuig::updateVoertuigen(vector<Voertuig>& voertuigen, vector<Verkeerslicht>& verkeerslichten, int tijd) {
+
+    for (unsigned int i = 0; i < voertuigen.size(); i++) {
+        if (i != 0) {
+            if (voertuigen[i - 1].getPositie() - voertuigen[i].getPositie() <= voertuigen[i].getMinVolgAfstand()) {
+                throw invalid_argument("Afstand tussen twee auto's is minder dan de minimale volgafstand.");
+            }
+        }
+
+        if (tijd == 0) {
+            voertuigen[i].setSnelheid(voertuigen[i].getMaxSnelheid());
+        }
+
+        if (voertuigen[i].getSnelheid() + voertuigen[i].getVersnelling() * 0.0166 < 0) {
+            voertuigen[i].setPositie(voertuigen[i].getPositie() -
+                (pow(voertuigen[i].getSnelheid(), 2) /
+                    (2 * voertuigen[i].getVersnelling())));
+            voertuigen[i].setSnelheid(0);
+        }
+
+        if (i == 0) {
+            voertuigen[i].setVersnelling(voertuigen[i].getMaxVersnelling()
+                * (1 - pow((voertuigen[i].getSnelheid()
+                    / voertuigen[i].getGewensteMaxSnelheid()), 4)));
+        } else {
+            double volgafstand = voertuigen[i - 1].getPositie() - voertuigen[i].getPositie() - voertuigen[i - 1].getLengte();
+            if (volgafstand <= 0) {
+                throw invalid_argument("Volgafstand kan niet negatief zijn");
+            }
+
+            double snelheidsverschil = voertuigen[i].getSnelheid() - voertuigen[i - 1].getSnelheid();
+
+            double interactieterm = (voertuigen[i].getMinVolgAfstand() +
+                max(0.0, voertuigen[i].getSnelheid()
+                    + ((voertuigen[i].getSnelheid()
+                        * snelheidsverschil)
+                        / (2 * sqrt(voertuigen[i].getMaxVersnelling()
+                            * voertuigen[i].getMaxRemFactor())))))
+                / volgafstand;
+
+            voertuigen[i].setVersnelling(voertuigen[i].getMaxVersnelling()
+                * (1 - pow((voertuigen[i].getSnelheid()
+                    / voertuigen[i].getGewensteMaxSnelheid()), 4))
+                - pow(interactieterm, 2));
+        }
+
+        if (voertuigen[i].getSnelheid() + voertuigen[i].getVersnelling() * 0.0166 >= 0) {
+            voertuigen[i].setSnelheid(voertuigen[i].getSnelheid() + voertuigen[i].getVersnelling() * 0.0166);
+        }
+        if (voertuigen[i].getSnelheid() > voertuigen[i].getMaxSnelheid()) {
+            voertuigen[i].setSnelheid(voertuigen[i].getMaxSnelheid());
+        }
+
+        for (unsigned int j = 0; j < verkeerslichten.size(); j++) {
+            Verkeerslicht tempVerkeerslicht = verkeerslichten[j];
+
+            bool isPrioriteit = (voertuigen[i].getType() == "brandweerwagen" ||
+                voertuigen[i].getType() == "ziekenwagen" ||
+                voertuigen[i].getType() == "politiecombi");
+
+            if ((i == 0 && tempVerkeerslicht.getPositie() - voertuigen[i].getPositie() > 7.5
+                && tempVerkeerslicht.getPositie() - voertuigen[i].getPositie() <= 50
+                && !isPrioriteit) || (i == 0 && voertuigen[i].getStopped())) {
+
+                Voertuig* eersteAutoVoorVerkeerslicht = &voertuigen[i];
+
+                if (tempVerkeerslicht.getKleur()) {
+                    eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                    eersteAutoVoorVerkeerslicht->setStopped(false);
+                } else {
+                    if (15 < tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie()
+                        && tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie() <= 50) {
+                        eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(0.4 * eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                        eersteAutoVoorVerkeerslicht->setStopped(true);
+                    } else if (tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie() <= 15) {
+                        eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(0.4 * eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                        eersteAutoVoorVerkeerslicht->setVersnelling(-((eersteAutoVoorVerkeerslicht->getMaxRemFactor()
+                            * eersteAutoVoorVerkeerslicht->getSnelheid())
+                            / eersteAutoVoorVerkeerslicht->getGewensteMaxSnelheid()));
+                        eersteAutoVoorVerkeerslicht->setStopped(true);
+                    }
+                }
+            } else if ((i != 0
+                && tempVerkeerslicht.getPositie() - voertuigen[i].getPositie() <= 50
+                && (!isPrioriteit)
+                && ((tempVerkeerslicht.getPositie() - voertuigen[i - 1].getPositie() < 0)
+                    || ((tempVerkeerslicht.getPositie() - voertuigen[i - 1].getPositie() <= 7.5)
+                        && (tempVerkeerslicht.getPositie() - voertuigen[i - 1].getPositie() >= 0)
+                        && !voertuigen[i - 1].getStopped())))
+                || (i != 0 && voertuigen[i].getStopped())) {
+
+                Voertuig* eersteAutoVoorVerkeerslicht = &voertuigen[i];
+
+                if (tempVerkeerslicht.getKleur()) {
+                    eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                    eersteAutoVoorVerkeerslicht->setStopped(false);
+                } else {
+                    if (15 < tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie()
+                        && tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie() <= 50) {
+                        eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(0.4 * eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                        eersteAutoVoorVerkeerslicht->setStopped(true);
+                    } else if (tempVerkeerslicht.getPositie() - eersteAutoVoorVerkeerslicht->getPositie() <= 15) {
+                        eersteAutoVoorVerkeerslicht->setGewensteMaxSnelheid(0.4 * eersteAutoVoorVerkeerslicht->getMaxSnelheid());
+                        eersteAutoVoorVerkeerslicht->setVersnelling(-((eersteAutoVoorVerkeerslicht->getMaxRemFactor()
+                            * eersteAutoVoorVerkeerslicht->getSnelheid())
+                            / eersteAutoVoorVerkeerslicht->getGewensteMaxSnelheid()));
+                        eersteAutoVoorVerkeerslicht->setStopped(true);
+                    }
+                }
+            }
+
+            if (tempVerkeerslicht.getPositie() - voertuigen[i].getPositie() < 0 && !voertuigen[i].getStopped()) {
+                voertuigen[i].setGewensteMaxSnelheid(voertuigen[i].getMaxSnelheid());
+            }
+        }
+
+        if (voertuigen[i].getSnelheid() + voertuigen[i].getVersnelling() * 0.0166 > 0) {
+            voertuigen[i].setPositie(voertuigen[i].getPositie()
+                + voertuigen[i].getSnelheid() * 0.0166
+                + (voertuigen[i].getVersnelling() * pow(0.0166, 2)) / 2);
+        }
+
+        if (voertuigen[i].getHuidigeBaanLengte() < voertuigen[i].getPositie()) {
+            voertuigen.erase(voertuigen.begin() + i);
+        }
+    }
+}
+
+void Voertuig::defineGewensteMaxSnelheid(vector<Voertuig>& voertuigen) {
+    for (unsigned int i = 0; i < voertuigen.size(); i++) {
+        voertuigen[i].setGewensteMaxSnelheid(voertuigen[i].getMaxSnelheid());
+        ENSURE(voertuigen[i].getGewensteMaxSnelheid()==voertuigen[i].getMaxSnelheid(), "voertuig has undefined gewensteMaxsnelheid");
+    }
+}
+
+void Voertuig::defineStopped(vector<Voertuig>& voertuigen) {
+    for (unsigned int i = 0; i < voertuigen.size(); i++) {
+        voertuigen[i].setStopped(false);
+        ENSURE(!voertuigen[i].getStopped(), "voertuig stopped is undefined");
+    }
+}

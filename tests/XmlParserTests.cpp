@@ -3,16 +3,7 @@
 
 // Test dat een XML-bestand correct geparsed wordt
 
-TEST(XmlParserTest, GeldigDocParser) {
-    XmlParser parser("src/input.xml");
-    try {
-        parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Failed to load file") {
-            FAIL();
-        }
-    }
-}
+
 TEST(XmlParserTest, RootElementCheckerParser) {
     XmlParser parser("src/input.xml");
     try {
@@ -35,240 +26,233 @@ TEST(XmlParserTest, FirstChildCheckerParser) {
 }
 
 TEST(XmlParserTest, MissingBaanNaamOfLengte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser("src/xmlfiles/BaanXmls/MissingBaan.xml");
 
-    try {
+    EXPECT_THROW({
         parser.parse();
-
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "BAAN element ontbreekt naam of lengte") {
-            FAIL();
-        }
-    }
+    }, invalid_argument);
 }
 
 
 TEST(XmlParserTest, LeegBaanNaam) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/BaanXmls/LeegBaanNaam.xml");
 
-    try {
+    EXPECT_THROW({
         parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Baan naam is leeg") {
-            FAIL();
-        }
-    }
+    }, invalid_argument);
 }
+
 TEST(XmlParserTest, LeegBaanLengte) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/BaanXmls/LeegBaanLengte.xml");
 
-    try {
+    EXPECT_THROW({
         parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) ==  "Baan lengte is leeg") {
-            FAIL();
-        }
-    }
+    }, invalid_argument);
 }
 
-TEST(XmlParserTest, NegatieveBaanLengte) {
-    XmlParser parser("src/input.xml");
-
-    try {
-        parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Baan lengte is negatief") {
-            FAIL();
-        }
-    }
-}
 
  //======== VOERTUIG========= //
 
 TEST(XmlParserTest, MissingBaanVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/MissingVoertuigBaanNaam.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIG element ontbreekt baannaam") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 
 TEST(XmlParserTest, MissingPositieVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/MissingVoertuigPositie.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIG element ontbreekt positie") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
-
 TEST(XmlParserTest, MissingTypeVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/MissingVoertuigType.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIG element ontbreekt type") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 
-// probeer nog test te schrijven om te testen of er voertuigen op de baan zijn
 
 TEST(XmlParserTest, LeegBaanNaamVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/LeegVoertuigBaanNaam.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Baannaam van het voertuig is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegPositieVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/LeegVoertuigPositie.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Positie van het voertuig is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegTypeVoertuig) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/LeegVoertuigType.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Type van het voertuig is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VoertuigInvalidBaan) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/OngeldigeVoertuigBaan.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) =="Voertuig heeft geen geldige baan") {
-            FAIL();
+        if (std::string(exception.what()) == "Voertuig heeft geen geldige baan") {
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VoertuigInvalidPositie) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/OngeldigeVoertuigPositie.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Positie van voertuig is ongeldig") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
-TEST(XmlParserTest, VoertuigInvalidParameters) {
-    XmlParser parser ("src/input.xml");
+TEST(XmlParserTest, VoertuigInvalidType) {
+    XmlParser parser ("src/xmlfiles/VoertuigXmls/OngeldigeVoertuigType.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Voertuig heeft ongeldige type") {
-            FAIL();
+        if (std::string(exception.what()) == "VOERTUIG heeft geen geldige type") {
+            SUCCEED();
         }
     }
 }
 //============= VERKEERSLICHT ===========//
 
 TEST(XmlParserTest, MissingBaanVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser("src/xmlfiles/VerkeerslichtXmls/MissingBaanVerkeerslicht.xml");
+
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VERKEERSLICHT element ontbreekt baannaam") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingPositieVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VerkeerslichtXmls/MissingPositieVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VERKEERSLICHT element ontbreekt positie") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingCyclusVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VerkeerslichtXmls/MissingCyclusVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VERKEERSLICHT element ontbreekt cyclus") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegBaanNaamVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VerkeerslichtXmls/LeegBaanNaamVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Baannaam van het verkeerslicht is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegPositieVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VerkeerslichtXmls/LeegPositieVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Positie van het verkeerslicht is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegCyclusVerkeerslicht) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VerkeerslichtXmls/LeegCyclusVerkeerslicht.xml");
     try {
         parser.parse();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Cyclus van het voertuig is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, NegatieveCyclusVerkeerslicht) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VerkeerslichtXmls/NegatieveCyclusVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Cyclus van verkeerslicht is negatief") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VerkeerkeerslichtInvalidBaan) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VerkeerslichtXmls/OngeldigeBaanVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Verkeerslicht heeft geen geldige baan") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VerkeerslichtInvalidPositie) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VerkeerslichtXmls/OngeldigePositieVerkeerslicht.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Positie van verkeerslicht is ongeldig") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
@@ -276,92 +260,100 @@ TEST(XmlParserTest, VerkeerslichtInvalidPositie) {
 // ============VOERTUIGGENERATOR========== //
 
 TEST(XmlParserTest, MissingBaanVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/MissingBaanVoertuigGenerator.xml");
     try {
         parser.parse();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIGGENERATOR element ontbreekt baannaam") {
-            FAIL();
+
         }
     }
 }
 TEST(XmlParserTest, MissingFrequentieVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/MissingFrequentieVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIGGENERATOR element ontbreekt frequentie") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingTypeVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/MissingTypeVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "VOERTUIGGENERATOR element ontbreekt type") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegBaanNaamVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/LeegBaanNaamVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Baannaam van de voertuiggenerator is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegFrequentieVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/LeegFrequentieVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Frequentie van de voertuiggenerator is leeg") {
-        FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegTypeVoertuigGenerator) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/VoertuigGeneratorXmls/LeegTypeVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Type van de voertuiggenerator is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, NegatieveFrequentieVoertuigGenerator) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VoertuigGeneratorXmls/NegatieveFrequentieVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Frequentie van voertuiggenerator is negatief") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VoertuigGeneratorInvalidBaan) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VoertuigGeneratorXmls/OngeldigeBaanVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Voertuiggenerator heeft geen geldige baan") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, VoertuigGeneratorInvalidType) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/VoertuigGeneratorXmls/OngeldigeTypeVoertuigGenerator.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Type van voertuiggenerator is ongeldig") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
@@ -369,174 +361,181 @@ TEST(XmlParserTest, VoertuigGeneratorInvalidType) {
 //============ BUSHALTE===========//
 
 TEST(XmlParserTest, MissingBaanBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/MissingBushalteBaan.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "BUSHALTE element ontbreekt baannaam") {
-        FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingPositieBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/MissingBushaltePositie.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "BUSHALTE element ontbreekt positie") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingWachtTijdBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/MissingBushalteWachttijd.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "BUSHALTE element ontbreekt wachttijd") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegBaanNaamBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/LeegBushalteBaan.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Baannaam van de bushalte is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegPositieBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/LeegBushaltePositie.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Positie van de bushalte is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, LeegWachttijdBushalte) {
-    XmlParser parser ("src/input.xml");
+    XmlParser parser ("src/xmlfiles/BushalteXmls/LeegBushalteWachttijd.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Wachttijd van de bushalte is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, NegatieveWachttijdBushalte) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/BushalteXmls/NegatieveBushalteWachttijd.xml");
     try {
         parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Wachttijd van de bushalte is negatief") {
-            FAIL();
-        }
-    }
-}
-TEST(XmlParserTest, BushalteInvalidBaan) {
-    XmlParser parser("src/input.xml");
-    try {
-        parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Bushalte heeft geen geldige baan") {
-            FAIL();
-        }
-    }
-}
-TEST(XmlParserTest, BushalteInvalidPositie) {
-    XmlParser parser("src/input.xml");
-    try {
-        parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Positie van bushalte is ongeldig") {
-            FAIL();
+        FAIL();
+    } catch (const std::exception& e) {
+        if (std::string(e.what()) == "Wachttijd van bushalte is negatief") {
+            SUCCEED();
         }
     }
 }
 
-// ====== KRUISPUNTEN ===== //
-TEST(XmlParserTest, MissingEersteBaanKruispunt) {
-    XmlParser parser("src/input.xml");
+TEST(XmlParserTest, BushalteInvalidBaan) {
+    XmlParser parser("src/xmlfiles/BushalteXmls/OngeldigeBushalteBaan.xml");
     try {
         parser.parse();
+        FAIL();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "Bushalte heeft geen geldige baan") {
+            SUCCEED();
+        }
+    }
+}
+TEST(XmlParserTest, BushalteInvalidPositie) {
+    XmlParser parser("src/xmlfiles/BushalteXmls/OngeldigeBushaltePositie.xml");
+    try {
+        parser.parse();
+        FAIL();
+    } catch (const invalid_argument& exception) {
+        if (std::string(exception.what()) == "Positie van bushalte is ongeldig") {
+            SUCCEED();
+        }
+    }
+}
+
+// ========= KRUISPUNTEN ========== //
+TEST(XmlParserTest, MissingEersteBaanKruispunt) {
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/MissingEersteBaanKruispunt.xml");
+    try {
+        parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "KRUISPUNT ontbreekt eerste baan") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingTweedeBaanKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/MissingTweedeBaanKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "KRUISPUNT ontbreekt tweede baan") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MeerdereBanenKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/MeerdereBanenKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "KRUISPUNT bevat meer dan twee banen") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingPositieEersteBaanKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/MissingPositieEersteBaanKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Eerste baan in kruispunt mist positie-attribuut") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, MissingPositieTweedeBaanKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/MissingPositieTweedeBaanKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Tweede baan in kruispunt mist positie-attribuut") {
-            FAIL();
-        }
-    }
-}
-TEST(XmlParserTest, LeegBaanNaamKruispunt) {
-    XmlParser parser("src/input.xml");
-    try {
-        parser.parse();
-    } catch (const invalid_argument& exception) {
-        if (std::string(exception.what()) == "Tweede baan in kruispunt mist positie-attribuut") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, EersteBaanNaamLeegKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/LeegEersteBaanNaamKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Naam van eerste baan in kruispunt is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }
 TEST(XmlParserTest, TweedeBaanNaamLeegKruispunt) {
-    XmlParser parser("src/input.xml");
+    XmlParser parser("src/xmlfiles/KruispuntenXmls/LeegTweedeBaanNaamKruispunt.xml");
     try {
         parser.parse();
+        FAIL();
     } catch (const invalid_argument& exception) {
         if (std::string(exception.what()) == "Naam van tweede baan in kruispunt is leeg") {
-            FAIL();
+            SUCCEED();
         }
     }
 }

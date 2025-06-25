@@ -4,50 +4,42 @@
 #include <string>
 #include "Baan.h"
 #include "Voertuig.h"
+#include "Auto.h"
+#include "Bus.h"
+#include "Brandweerwagen.h"
+#include "Ziekenwagen.h"
+#include "Politiecombi.h"
 #include "Verkeerslicht.h"
 #include "Voertuiggenerator.h"
+#include "DesignByContract.h"
 using namespace std;
 
-/**
- * Constructor voor de XmlParser.
- * @param inputnaam De bestandsnaam van het XML-bestand dat moet worden geparsed
- */
 XmlParser::XmlParser(string inputnaam) {
+    _initCheck = this;
     bestandsnaam = inputnaam;
+    ENSURE(properlyInit(), "constructor must end in properlyInit state");
 }
 
-/**
- * Stelt de vector met geparste banen in.
- * @param tempBanen De vector met banen om in te stellen
- */
+bool XmlParser::properlyInit() {
+    return _initCheck == this;
+}
+
 void XmlParser::setParsedBanen(vector<Baan> tempBanen) {
     parsedBanen = tempBanen;
 }
 
-/**
- * Stelt de vector met geparste voertuigen in.
- * @param tempVoertuigen De vector met voertuigen om in te stellen
- */
+
 void XmlParser::setParsedVoertuigen(vector<Voertuig> tempVoertuigen) {
     parsedVoertuigen = tempVoertuigen;
 }
 
-/**
- * Geeft de geparste verkeerslichten terug.
- * @return Refereert naar vector met verkeerslichten uit het XML-bestand
- */
 vector<Verkeerslicht>& XmlParser::getParsedVerkeerslichten() {
     return parsedVerkeerslichten;
 }
 
-/**
- * Stelt de vector met geparste verkeerslichten in.
- * @param parsed_verkeerslicht De vector met verkeerslichten om in te stellen
- */
 void XmlParser::setParsedVerkeerslichten(const vector<Verkeerslicht> &parsed_verkeerslicht) {
     parsedVerkeerslichten = parsed_verkeerslicht;
 }
-
 /**
  * Geeft de geparste banen terug.
  * @return Vector met banen uit het XML-bestand
@@ -72,42 +64,26 @@ vector<Bushalte> XmlParser::getParsedBushaltes() const {
     return parsedBushaltes;
 }
 
-/**
- * Stelt de vector met geparste bushaltes in.
- * @param parsed_bushaltes De vector met bushaltes om in te stellen
- */
+
 void XmlParser::setParsedBushaltes(const vector<Bushalte> &parsed_bushaltes) {
     parsedBushaltes = parsed_bushaltes;
 }
 
-/**
- * Geeft de geparste kruispunten terug.
- * @return Vector met kruispunten uit het XML-bestand
- */
 vector<Kruispunt> XmlParser::getParsedKruispunten() const {
     return parsedKruispunten;
 }
 
-/**
- * Stelt de vector met geparste kruispunten in.
- * @param parsed_kruispunten De vector met kruispunten om in te stellen
- */
+
 void XmlParser::setParsedKruispunten(const vector<Kruispunt> &parsed_kruispunten) {
     parsedKruispunten = parsed_kruispunten;
 }
 
-/**
- * Geeft de geparste voertuiggeneratoren terug.
- * @return Vector met voertuiggeneratoren uit het XML-bestand
- */
+
 vector<Voertuiggenerator> XmlParser::getParsedVoertuiggeneratoren() const {
     return parsedVoertuiggenerator;
 }
 
-/**
- * Stelt de vector met geparste voertuiggeneratoren in.
- * @param parsed_voertuiggenerator De vector met voertuiggeneratoren om in te stellen
- */
+
 void XmlParser::setParsedVoertuiggeneratoren(const vector<Voertuiggenerator> &parsed_voertuiggenerator) {
     parsedVoertuiggenerator = parsed_voertuiggenerator;
 }
@@ -148,6 +124,7 @@ void XmlParser::parse() {
 
     vector<Baan> tempBanen;
     vector<Voertuig> tempVoertuigen;
+    vector<bool> typeOngeldig;
     vector<Verkeerslicht> tempVerkeerslichten;
     vector<Voertuiggenerator> tempVoertuiggeneratoren;
     vector<Bushalte> tempBushaltes;
@@ -238,8 +215,35 @@ void XmlParser::parse() {
             string baanNaam = baanNaamElement->GetText();
             int positie = stoi(positieElement->GetText());
             string type = typeElement->GetText();
-            Voertuig temp(baanNaam, positie, type);
-            tempVoertuigen.push_back(temp);
+            if (type == "auto") {
+                Auto temp(baanNaam, positie);
+                tempVoertuigen.push_back(temp);
+                typeOngeldig.push_back(0);
+            }
+            else if (type == "bus") {
+                Bus temp(baanNaam, positie);
+                tempVoertuigen.push_back(temp);
+                typeOngeldig.push_back(0);
+            }
+            else if (type == "brandweerwagen") {
+                Brandweerwagen temp(baanNaam, positie);
+                tempVoertuigen.push_back(temp);
+                typeOngeldig.push_back(0);
+            }
+            else if (type == "ziekenwagen") {
+                Ziekenwagen temp(baanNaam, positie);
+                tempVoertuigen.push_back(temp);
+                typeOngeldig.push_back(0);
+            }
+            else if (type == "politiecombi") {
+                Politiecombi temp(baanNaam, positie);
+                tempVoertuigen.push_back(temp);
+                typeOngeldig.push_back(0);
+            }
+            else {
+                throw invalid_argument ("VOERTUIG heeft geen geldige type");
+                typeOngeldig.push_back(1);
+            }
         }
 
 
@@ -435,11 +439,9 @@ void XmlParser::parse() {
                 temp->getPositie() > getRelevanteBaan(temp->getNaamBaan()) -> getLengteBaan()) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
             throw invalid_argument("Positie van voertuig is ongeldig");
-        }
-        if (temp->getLengte()==-1 || temp->getMaxVersnelling()==-1 || temp->getMaxSnelheid()==-1 ||
-                temp->getMaxRemFactor()==-1 || temp->getMinVolgAfstand()==-1) {
+                }
+        if (typeOngeldig[i]) {
             tempVoertuigen.erase(tempVoertuigen.begin()+i);
-            throw invalid_argument("Voertuig heeft ongeldige type");
         }
         Baan* tempBaan = getRelevanteBaan(temp->getNaamBaan());
         int tempBaanLengte = tempBaan->getLengteBaan();
